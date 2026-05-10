@@ -1,44 +1,44 @@
-﻿"LANGUAGE","English","Language name (in native language).  This means the NAME OF THE LANGUAGE BEING TRANSLATED INTO, and should NOT be a translation of the word 'English'"
-"MOD_DESCRIPTION","Add motion blur effect to the camera",""
-"ENABLE_MOTION_BLUR_IN","Enable motion blur in the following modes:",""
-"GAME","Game",""
-"MAP_EDITOR","Map Editor","Use the official Cities: Skylines translation for this term"
-"ASSET_EDITOR","Asset Editor","Use the official Cities: Skylines translation for this term"
-"THEME_EDITOR","Theme Editor","Use the official Cities: Skylines translation for this term"
-"SCENARIO_EDITOR","Scenario Editor","Use the official Cities: Skylines translation for this term"
-"VANILLA_CAM","Vanilla Camera Modes (Free Camera Mode & Cinematic Camera)","Use the official Cities: Skylines translation for this term"
-"FPC","Any mode of First Person Camera - Continued",""
-"ACME_FPS","FPS Mode of ACME",""
-"PARAM","Parameters",""
-"ALGO","Algorithm",""
-"ALGO_TOOLTIP","CameraMotion: Valve-style blur calculated from camera rotation and movement.
-LocalBlur: Simple blur along local velocity vectors.
-Reconstruction: Performs plausible motion blur using tile-based velocity estimation.
-ReconstructionDX11: Higher-quality version optimized for DirectX 11.
-ReconstructionDisc: Uses disc-shaped kernel sampling for performance.","Keep the algorithm names (such as CameraMotion) unchanged. You may append the translation in parentheses after the name, e.g. 'CameraMotion (YOUR TRANSLATION)'."
-"AVAILABLE_ONLY_TIP","This setting only applies when ""{0}"" is set to CameraMotion.",""
-"MOVEMENT_SCALE","Movement Scale",""
-"MOVEMENT_SCALE_TOOLTIP","Controls how much camera translation contributes to motion blur.
-Higher values result in more noticeable blur when the camera moves.",""
-"ROTATION_SCALE","Rotation Scale",""
-"ROTATION_SCALE_TOOLTIP","Controls how much camera rotation contributes to motion blur.
-Higher values result in stronger blur when turning.",""
-"MAX_VELOCITY","Max Velocity",""
-"MAX_VELOCITY_TOOLTIP","Sets the maximum length of motion blur trails.
-Lower values produce a tighter blur; higher values allow longer streaks.
-For Reconstruction-based filters, this value is capped at 10.",""
-"MIN_VELOCITY","Min Velocity",""
-"MIN_VELOCITY_TOOLTIP","Sets the minimum speed below which no blur is applied.
-Lower values cause even subtle motion to be blurred.",""
-"VELOCITY_SCALE","Velocity Scale",""
-"VELOCITY_SCALE_TOOLTIP","Global multiplier applied to all velocity vectors.
-Increase to exaggerate motion blur intensity.",""
-"SOFT_Z_DISTANCE","Soft Z Distance",""
-"SOFT_Z_DISTANCE_TOOLTIP","Adjusts how depth differences influence blur transitions.
-Lower values create sharper separation between foreground and background; higher values blend them smoothly.",""
-"JITTER","Jitter",""
-"JITTER_TOOLTIP","The amount of random offset applied to sampling positions, which helps reduce banding artifacts.
-Higher values produce softer blur but may introduce visible noise.",""
-"TOGGLE_MOTION_BLUR","Toggle Motion Blur",""
-"TOGGLE_MOTION_BLUR_TOOLTIP","Works in all modes. However, when switching to a mode metioned above, the state will be overridden by its settings.",""
-"RESET_SETTINGS","Reset Settings",""
+﻿"LANGUAGE","中文","Language name (in native language).  This means the NAME OF THE LANGUAGE BEING TRANSLATED INTO, and should NOT be a translation of the word 'English'"
+"MOD_DESCRIPTION","为摄像机添加动态模糊效果",""
+"ENABLE_MOTION_BLUR_IN","为以下模式启用动态模糊：",""
+"GAME","游戏内",""
+"MAP_EDITOR","地图编辑工具","Use the official Cities: Skylines translation for this term"
+"ASSET_EDITOR","资产编辑工具","Use the official Cities: Skylines translation for this term"
+"THEME_EDITOR","主题编辑工具","Use the official Cities: Skylines translation for this term"
+"SCENARIO_EDITOR","剧本编辑工具","Use the official Cities: Skylines translation for this term"
+"VANILLA_CAM","原版摄像机模式（自由视角 & 影院式视角）","Use the official Cities: Skylines translation for this term"
+"FPC","First Person Camera - Continued 内的所有模式",""
+"ACME_FPS","ACME 的 FPS 模式",""
+"PARAM","参数",""
+"ALGO","算法",""
+"ALGO_TOOLTIP","CameraMotion：Valve 风格模糊，基于摄像机的旋转和平移计算。
+LocalBlur：沿局部速度方向的简单模糊。
+Reconstruction：基于分块速度估计的逼真动态模糊。
+ReconstructionDX11：为 DirectX 11 优化的高质量版本。
+ReconstructionDisc：使用圆盘形采样核，性能更佳。","Keep the algorithm names (such as CameraMotion) unchanged. You may append the translation in parentheses after the name, e.g. 'CameraMotion (YOUR TRANSLATION)'."
+"AVAILABLE_ONLY_TIP","此设置仅在 “{0}” 设为 CameraMotion 时生效。",""
+"MOVEMENT_SCALE","位移强度",""
+"MOVEMENT_SCALE_TOOLTIP","控制摄像机平移对模糊的影响程度。
+数值越高，移动时模糊越明显。",""
+"ROTATION_SCALE","旋转强度",""
+"ROTATION_SCALE_TOOLTIP","控制摄像机旋转对模糊的影响程度。
+数值越高，转向时模糊越强。",""
+"MAX_VELOCITY","最大速度",""
+"MAX_VELOCITY_TOOLTIP","设置动态模糊拖尾的最大长度。
+数值越低，模糊越紧凑；数值越高，拖尾越长。
+对于基于 Reconstruction 的滤镜，该值上限为 10。",""
+"MIN_VELOCITY","最小速度",""
+"MIN_VELOCITY_TOOLTIP","设置不产生模糊的最低速度阈值。
+数值越低，越微小的运动也会被模糊。",""
+"VELOCITY_SCALE","速度缩放",""
+"VELOCITY_SCALE_TOOLTIP","应用于所有速度向量的全局乘数。
+增大此值可增加动态模糊强度。",""
+"SOFT_Z_DISTANCE","深度软过渡",""
+"SOFT_Z_DISTANCE_TOOLTIP","调整深度差异对模糊过渡的影响。
+数值越低，前景与背景的分离越清晰；数值越高，过渡越平滑。",""
+"JITTER","抖动",""
+"JITTER_TOOLTIP","施加在采样位置上的随机偏移量，有助于减少条带伪影。
+数值越高，模糊越柔和，但可能引入可见噪点。",""
+"TOGGLE_MOTION_BLUR","切换动态模糊",""
+"TOGGLE_MOTION_BLUR_TOOLTIP","在所有模式下均可使用。但当切换到以上提及到的模式时，状态会被其设置覆盖。",""
+"RESET_SETTINGS","重置设置",""
