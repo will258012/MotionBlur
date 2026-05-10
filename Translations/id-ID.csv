@@ -1,44 +1,44 @@
-﻿"LANGUAGE","English","Language name (in native language).  This means the NAME OF THE LANGUAGE BEING TRANSLATED INTO, and should NOT be a translation of the word 'English'"
-"MOD_DESCRIPTION","Add motion blur effect to the camera",""
-"ENABLE_MOTION_BLUR_IN","Enable motion blur in the following modes:",""
-"GAME","Game",""
-"MAP_EDITOR","Map Editor","Use the official Cities: Skylines translation for this term"
-"ASSET_EDITOR","Asset Editor","Use the official Cities: Skylines translation for this term"
-"THEME_EDITOR","Theme Editor","Use the official Cities: Skylines translation for this term"
-"SCENARIO_EDITOR","Scenario Editor","Use the official Cities: Skylines translation for this term"
-"VANILLA_CAM","Vanilla Camera Modes (Free Camera Mode & Cinematic Camera)","Use the official Cities: Skylines translation for this term"
-"FPC","Any mode of First Person Camera - Continued",""
-"ACME_FPS","FPS Mode of ACME",""
-"PARAM","Parameters",""
-"ALGO","Algorithm",""
-"ALGO_TOOLTIP","CameraMotion: Valve-style blur calculated from camera rotation and movement.
-LocalBlur: Simple blur along local velocity vectors.
-Reconstruction: Performs plausible motion blur using tile-based velocity estimation.
-ReconstructionDX11: Higher-quality version optimized for DirectX 11.
-ReconstructionDisc: Uses disc-shaped kernel sampling for performance.","Keep the algorithm names (such as CameraMotion) unchanged. You may append the translation in parentheses after the name, e.g. 'CameraMotion (YOUR TRANSLATION)'."
-"AVAILABLE_ONLY_TIP","This setting only applies when ""{0}"" is set to CameraMotion.",""
-"MOVEMENT_SCALE","Movement Scale",""
-"MOVEMENT_SCALE_TOOLTIP","Controls how much camera translation contributes to motion blur.
-Higher values result in more noticeable blur when the camera moves.",""
-"ROTATION_SCALE","Rotation Scale",""
-"ROTATION_SCALE_TOOLTIP","Controls how much camera rotation contributes to motion blur.
-Higher values result in stronger blur when turning.",""
-"MAX_VELOCITY","Max Velocity",""
-"MAX_VELOCITY_TOOLTIP","Sets the maximum length of motion blur trails.
-Lower values produce a tighter blur; higher values allow longer streaks.
-For Reconstruction-based filters, this value is capped at 10.",""
-"MIN_VELOCITY","Min Velocity",""
-"MIN_VELOCITY_TOOLTIP","Sets the minimum speed below which no blur is applied.
-Lower values cause even subtle motion to be blurred.",""
-"VELOCITY_SCALE","Velocity Scale",""
-"VELOCITY_SCALE_TOOLTIP","Global multiplier applied to all velocity vectors.
-Increase to exaggerate motion blur intensity.",""
-"SOFT_Z_DISTANCE","Soft Z Distance",""
-"SOFT_Z_DISTANCE_TOOLTIP","Adjusts how depth differences influence blur transitions.
-Lower values create sharper separation between foreground and background; higher values blend them smoothly.",""
+﻿"LANGUAGE","Bahasa Indonesia","Language name (in native language).  This means the NAME OF THE LANGUAGE BEING TRANSLATED INTO, and should NOT be a translation of the word 'English'"
+"MOD_DESCRIPTION","Menambahkan efek motion blur pada kamera",""
+"ENABLE_MOTION_BLUR_IN","Aktifkan motion blur dalam mode berikut:",""
+"GAME","Permainan",""
+"MAP_EDITOR","Editor Peta","Use the official Cities: Skylines translation for this term"
+"ASSET_EDITOR","Editor Aset","Use the official Cities: Skylines translation for this term"
+"THEME_EDITOR","Editor Tema","Use the official Cities: Skylines translation for this term"
+"SCENARIO_EDITOR","Editor Skenario","Use the official Cities: Skylines translation for this term"
+"VANILLA_CAM","Mode Kamera Vanilla (Mode Kamera Bebas & Kamera Sinematik)","Use the official Cities: Skylines translation for this term"
+"FPC","Mode apa pun dari First Person Camera - Continued",""
+"ACME_FPS","Mode FPS ACME",""
+"PARAM","Parameter",""
+"ALGO","Algoritma",""
+"ALGO_TOOLTIP","CameraMotion: Blur gaya Valve yang dihitung dari rotasi dan pergerakan kamera.
+LocalBlur: Blur sederhana di sepanjang vektor kecepatan lokal.
+Reconstruction: Melakukan motion blur yang masuk akal menggunakan estimasi kecepatan berbasis tile.
+ReconstructionDX11: Versi kualitas lebih tinggi yang dioptimalkan untuk DirectX 11.
+ReconstructionDisc: Menggunakan sampling kernel berbentuk cakram untuk performa.","Keep the algorithm names (such as CameraMotion) unchanged. You may append the translation in parentheses after the name, e.g. 'CameraMotion (YOUR TRANSLATION)'."
+"AVAILABLE_ONLY_TIP","Pengaturan ini hanya berlaku jika ""{0}"" diatur ke CameraMotion.",""
+"MOVEMENT_SCALE","Skala Gerakan",""
+"MOVEMENT_SCALE_TOOLTIP","Mengontrol seberapa besar translasi kamera berkontribusi pada blur gerakan.
+Nilai yang lebih tinggi menghasilkan blur yang lebih terlihat saat kamera bergerak.",""
+"ROTATION_SCALE","Skala Rotasi",""
+"ROTATION_SCALE_TOOLTIP","Mengontrol seberapa besar rotasi kamera berkontribusi pada blur gerakan.
+Nilai yang lebih tinggi menghasilkan blur yang lebih kuat saat berbelok.",""
+"MAX_VELOCITY","Kecepatan Maksimum",""
+"MAX_VELOCITY_TOOLTIP","Menetapkan panjang maksimum jejak blur gerakan.
+Nilai rendah menghasilkan blur yang lebih rapat; nilai tinggi memungkinkan goresan yang lebih panjang.
+Untuk filter berbasis Rekonstruksi, nilai ini dibatasi maksimal 10.",""
+"MIN_VELOCITY","Kecepatan Minimum",""
+"MIN_VELOCITY_TOOLTIP","Mengatur kecepatan minimum di mana tidak ada blur yang diterapkan.
+Nilai yang lebih rendah menyebabkan gerakan halus pun menjadi blur.",""
+"VELOCITY_SCALE","Skala Kecepatan",""
+"VELOCITY_SCALE_TOOLTIP","Pengganda global yang diterapkan pada semua vektor kecepatan.
+Tingkatkan untuk memperbesar intensitas blur gerakan.",""
+"SOFT_Z_DISTANCE","Jarak Z Lembut",""
+"SOFT_Z_DISTANCE_TOOLTIP","Menyesuaikan bagaimana perbedaan kedalaman mempengaruhi transisi blur.
+Nilai yang lebih rendah menciptakan pemisahan yang lebih tajam antara latar depan dan latar belakang; nilai yang lebih tinggi menggabungkannya dengan mulus.",""
 "JITTER","Jitter",""
-"JITTER_TOOLTIP","The amount of random offset applied to sampling positions, which helps reduce banding artifacts.
-Higher values produce softer blur but may introduce visible noise.",""
-"TOGGLE_MOTION_BLUR","Toggle Motion Blur",""
-"TOGGLE_MOTION_BLUR_TOOLTIP","Works in all modes. However, when switching to a mode metioned above, the state will be overridden by its settings.",""
-"RESET_SETTINGS","Reset Settings",""
+"JITTER_TOOLTIP","Jumlah offset acak yang diterapkan pada posisi sampling, yang membantu mengurangi artefak banding.
+Nilai yang lebih tinggi menghasilkan blur yang lebih lembut tetapi dapat menimbulkan noise yang terlihat.",""
+"TOGGLE_MOTION_BLUR","Alihkan Motion Blur",""
+"TOGGLE_MOTION_BLUR_TOOLTIP","Berfungsi di semua mode. Namun, ketika beralih ke mode yang disebutkan di atas, status akan diganti oleh pengaturannya.",""
+"RESET_SETTINGS","Atur Ulang Pengaturan",""
