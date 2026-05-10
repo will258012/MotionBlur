@@ -1,44 +1,44 @@
-﻿"LANGUAGE","English","Language name (in native language).  This means the NAME OF THE LANGUAGE BEING TRANSLATED INTO, and should NOT be a translation of the word 'English'"
-"MOD_DESCRIPTION","Add motion blur effect to the camera",""
-"ENABLE_MOTION_BLUR_IN","Enable motion blur in the following modes:",""
-"GAME","Game",""
-"MAP_EDITOR","Map Editor","Use the official Cities: Skylines translation for this term"
-"ASSET_EDITOR","Asset Editor","Use the official Cities: Skylines translation for this term"
-"THEME_EDITOR","Theme Editor","Use the official Cities: Skylines translation for this term"
-"SCENARIO_EDITOR","Scenario Editor","Use the official Cities: Skylines translation for this term"
-"VANILLA_CAM","Vanilla Camera Modes (Free Camera Mode & Cinematic Camera)","Use the official Cities: Skylines translation for this term"
-"FPC","Any mode of First Person Camera - Continued",""
-"ACME_FPS","FPS Mode of ACME",""
-"PARAM","Parameters",""
-"ALGO","Algorithm",""
-"ALGO_TOOLTIP","CameraMotion: Valve-style blur calculated from camera rotation and movement.
-LocalBlur: Simple blur along local velocity vectors.
-Reconstruction: Performs plausible motion blur using tile-based velocity estimation.
-ReconstructionDX11: Higher-quality version optimized for DirectX 11.
-ReconstructionDisc: Uses disc-shaped kernel sampling for performance.","Keep the algorithm names (such as CameraMotion) unchanged. You may append the translation in parentheses after the name, e.g. 'CameraMotion (YOUR TRANSLATION)'."
-"AVAILABLE_ONLY_TIP","This setting only applies when ""{0}"" is set to CameraMotion.",""
-"MOVEMENT_SCALE","Movement Scale",""
-"MOVEMENT_SCALE_TOOLTIP","Controls how much camera translation contributes to motion blur.
-Higher values result in more noticeable blur when the camera moves.",""
-"ROTATION_SCALE","Rotation Scale",""
-"ROTATION_SCALE_TOOLTIP","Controls how much camera rotation contributes to motion blur.
-Higher values result in stronger blur when turning.",""
-"MAX_VELOCITY","Max Velocity",""
-"MAX_VELOCITY_TOOLTIP","Sets the maximum length of motion blur trails.
-Lower values produce a tighter blur; higher values allow longer streaks.
-For Reconstruction-based filters, this value is capped at 10.",""
-"MIN_VELOCITY","Min Velocity",""
-"MIN_VELOCITY_TOOLTIP","Sets the minimum speed below which no blur is applied.
-Lower values cause even subtle motion to be blurred.",""
-"VELOCITY_SCALE","Velocity Scale",""
-"VELOCITY_SCALE_TOOLTIP","Global multiplier applied to all velocity vectors.
-Increase to exaggerate motion blur intensity.",""
-"SOFT_Z_DISTANCE","Soft Z Distance",""
-"SOFT_Z_DISTANCE_TOOLTIP","Adjusts how depth differences influence blur transitions.
-Lower values create sharper separation between foreground and background; higher values blend them smoothly.",""
-"JITTER","Jitter",""
-"JITTER_TOOLTIP","The amount of random offset applied to sampling positions, which helps reduce banding artifacts.
-Higher values produce softer blur but may introduce visible noise.",""
-"TOGGLE_MOTION_BLUR","Toggle Motion Blur",""
-"TOGGLE_MOTION_BLUR_TOOLTIP","Works in all modes. However, when switching to a mode metioned above, the state will be overridden by its settings.",""
-"RESET_SETTINGS","Reset Settings",""
+﻿"LANGUAGE","Українська","Language name (in native language).  This means the NAME OF THE LANGUAGE BEING TRANSLATED INTO, and should NOT be a translation of the word 'English'"
+"MOD_DESCRIPTION","Додати ефект розмиття руху до камери",""
+"ENABLE_MOTION_BLUR_IN","Увімкнути розмиття руху в наступних режимах:",""
+"GAME","Гра",""
+"MAP_EDITOR","Редактор мап","Use the official Cities: Skylines translation for this term"
+"ASSET_EDITOR","Редактор об'єктів","Use the official Cities: Skylines translation for this term"
+"THEME_EDITOR","Редактор тем","Use the official Cities: Skylines translation for this term"
+"SCENARIO_EDITOR","Редактор сценаріїв","Use the official Cities: Skylines translation for this term"
+"VANILLA_CAM","Стандартні режими камери (Вільна камера та Кінематографічна камера)","Use the official Cities: Skylines translation for this term"
+"FPC","Будь-який режим мода First Person Camera - Continued",""
+"ACME_FPS","Режим FPS ACME",""
+"PARAM","Параметри",""
+"ALGO","Алгоритм",""
+"ALGO_TOOLTIP","CameraMotion: Valve-стиль розмиття, обчислене за обертанням та рухом камери.
+LocalBlur: Просте розмиття вздовж локальних векторів швидкості.
+Reconstruction: Виконує правдоподібне розмиття руху з використанням оцінки швидкості на основі тайлів.
+ReconstructionDX11: Версія вищої якості, оптимізована для DirectX 11.
+ReconstructionDisc: Використовує дископодібне ядро вибірки для продуктивності.","Keep the algorithm names (such as CameraMotion) unchanged. You may append the translation in parentheses after the name, e.g. 'CameraMotion (YOUR TRANSLATION)'."
+"AVAILABLE_ONLY_TIP","Це налаштування застосовується лише тоді, коли ""{0}"" встановлено на CameraMotion.",""
+"MOVEMENT_SCALE","Масштаб руху",""
+"MOVEMENT_SCALE_TOOLTIP","Контролює, наскільки переміщення камери впливає на розмиття в русі.
+Вищі значення призводять до більш помітного розмиття під час руху камери.",""
+"ROTATION_SCALE","Масштаб обертання",""
+"ROTATION_SCALE_TOOLTIP","Контролює, наскільки обертання камери впливає на розмиття в русі.
+Вищі значення призводять до сильнішого розмиття під час повороту.",""
+"MAX_VELOCITY","Максимальна швидкість",""
+"MAX_VELOCITY_TOOLTIP","Встановлює максимальну довжину слідів розмиття в русі.
+Нижчі значення створюють більш щільне розмиття; вищі значення дозволяють довші смуги.
+Для фільтрів на основі Reconstruction це значення обмежено 10.",""
+"MIN_VELOCITY","Мінімальна швидкість",""
+"MIN_VELOCITY_TOOLTIP","Встановлює мінімальну швидкість, нижче якої розмиття не застосовується.
+Нижчі значення спричиняють розмиття навіть незначного руху.",""
+"VELOCITY_SCALE","Масштаб швидкості",""
+"VELOCITY_SCALE_TOOLTIP","Глобальний множник, що застосовується до всіх векторів швидкості.
+Збільште, щоб посилити інтенсивність розмиття руху.",""
+"SOFT_Z_DISTANCE","М'яка Z-відстань",""
+"SOFT_Z_DISTANCE_TOOLTIP","Регулює вплив різниці глибини на переходи розмиття.
+Нижчі значення створюють чіткіше розділення між переднім та заднім планом; вищі значення змішують їх плавно.",""
+"JITTER","Тремтіння",""
+"JITTER_TOOLTIP","Величина випадкового зсуву, який застосовується до позицій семплювання, що допомагає зменшити артефакти смугастості.
+Вищі значення дають м'якіше розмиття, але можуть вносити видимий шум.",""
+"TOGGLE_MOTION_BLUR","Перемкнути розмиття руху",""
+"TOGGLE_MOTION_BLUR_TOOLTIP","Працює в усіх режимах. Однак, при перемиканні на вищезгаданий режим, стан буде перевизначено його налаштуваннями.",""
+"RESET_SETTINGS","Скинути налаштування",""
