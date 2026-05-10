@@ -1,44 +1,44 @@
-﻿"LANGUAGE","English","Language name (in native language).  This means the NAME OF THE LANGUAGE BEING TRANSLATED INTO, and should NOT be a translation of the word 'English'"
-"MOD_DESCRIPTION","Add motion blur effect to the camera",""
-"ENABLE_MOTION_BLUR_IN","Enable motion blur in the following modes:",""
-"GAME","Game",""
-"MAP_EDITOR","Map Editor","Use the official Cities: Skylines translation for this term"
-"ASSET_EDITOR","Asset Editor","Use the official Cities: Skylines translation for this term"
-"THEME_EDITOR","Theme Editor","Use the official Cities: Skylines translation for this term"
-"SCENARIO_EDITOR","Scenario Editor","Use the official Cities: Skylines translation for this term"
-"VANILLA_CAM","Vanilla Camera Modes (Free Camera Mode & Cinematic Camera)","Use the official Cities: Skylines translation for this term"
-"FPC","Any mode of First Person Camera - Continued",""
-"ACME_FPS","FPS Mode of ACME",""
-"PARAM","Parameters",""
-"ALGO","Algorithm",""
-"ALGO_TOOLTIP","CameraMotion: Valve-style blur calculated from camera rotation and movement.
-LocalBlur: Simple blur along local velocity vectors.
-Reconstruction: Performs plausible motion blur using tile-based velocity estimation.
-ReconstructionDX11: Higher-quality version optimized for DirectX 11.
-ReconstructionDisc: Uses disc-shaped kernel sampling for performance.","Keep the algorithm names (such as CameraMotion) unchanged. You may append the translation in parentheses after the name, e.g. 'CameraMotion (YOUR TRANSLATION)'."
-"AVAILABLE_ONLY_TIP","This setting only applies when ""{0}"" is set to CameraMotion.",""
-"MOVEMENT_SCALE","Movement Scale",""
-"MOVEMENT_SCALE_TOOLTIP","Controls how much camera translation contributes to motion blur.
-Higher values result in more noticeable blur when the camera moves.",""
-"ROTATION_SCALE","Rotation Scale",""
-"ROTATION_SCALE_TOOLTIP","Controls how much camera rotation contributes to motion blur.
-Higher values result in stronger blur when turning.",""
-"MAX_VELOCITY","Max Velocity",""
-"MAX_VELOCITY_TOOLTIP","Sets the maximum length of motion blur trails.
-Lower values produce a tighter blur; higher values allow longer streaks.
-For Reconstruction-based filters, this value is capped at 10.",""
-"MIN_VELOCITY","Min Velocity",""
-"MIN_VELOCITY_TOOLTIP","Sets the minimum speed below which no blur is applied.
-Lower values cause even subtle motion to be blurred.",""
-"VELOCITY_SCALE","Velocity Scale",""
-"VELOCITY_SCALE_TOOLTIP","Global multiplier applied to all velocity vectors.
-Increase to exaggerate motion blur intensity.",""
-"SOFT_Z_DISTANCE","Soft Z Distance",""
-"SOFT_Z_DISTANCE_TOOLTIP","Adjusts how depth differences influence blur transitions.
-Lower values create sharper separation between foreground and background; higher values blend them smoothly.",""
-"JITTER","Jitter",""
-"JITTER_TOOLTIP","The amount of random offset applied to sampling positions, which helps reduce banding artifacts.
-Higher values produce softer blur but may introduce visible noise.",""
-"TOGGLE_MOTION_BLUR","Toggle Motion Blur",""
-"TOGGLE_MOTION_BLUR_TOOLTIP","Works in all modes. However, when switching to a mode metioned above, the state will be overridden by its settings.",""
-"RESET_SETTINGS","Reset Settings",""
+﻿"LANGUAGE","Türkçe","Language name (in native language).  This means the NAME OF THE LANGUAGE BEING TRANSLATED INTO, and should NOT be a translation of the word 'English'"
+"MOD_DESCRIPTION","Kameraya hareket bulanıklığı efekti ekle",""
+"ENABLE_MOTION_BLUR_IN","Hareket bulanıklığını aşağıdaki modlarda etkinleştir:",""
+"GAME","Oyun",""
+"MAP_EDITOR","Harita Düzenleyicisi","Use the official Cities: Skylines translation for this term"
+"ASSET_EDITOR","Varlık Düzenleyicisi","Use the official Cities: Skylines translation for this term"
+"THEME_EDITOR","Tema Düzenleyicisi","Use the official Cities: Skylines translation for this term"
+"SCENARIO_EDITOR","Senaryo Düzenleyicisi","Use the official Cities: Skylines translation for this term"
+"VANILLA_CAM","Vanilla Kamera Modları (Serbest Kamera Modu ve Sinematik Kamera)","Use the official Cities: Skylines translation for this term"
+"FPC","First Person Camera - Continued'ın herhangi bir modu",""
+"ACME_FPS","ACME'nin FPS Modu",""
+"PARAM","Parametreler",""
+"ALGO","Algoritma",""
+"ALGO_TOOLTIP","CameraMotion: Valve tarzı bulanıklık, kamera dönüşü ve hareketinden hesaplanır.
+LocalBlur: Yerel hız vektörleri boyunca basit bulanıklık.
+Reconstruction: Döşeme tabanlı hız tahmini kullanarak gerçekçi hareket bulanıklığı gerçekleştirir.
+ReconstructionDX11: DirectX 11 için optimize edilmiş yüksek kaliteli sürüm.
+ReconstructionDisc: Performans için disk şeklinde çekirdek örnekleme kullanır.","Keep the algorithm names (such as CameraMotion) unchanged. You may append the translation in parentheses after the name, e.g. 'CameraMotion (YOUR TRANSLATION)'."
+"AVAILABLE_ONLY_TIP","Bu ayar yalnızca ""{0}"" CameraMotion olarak ayarlandığında geçerlidir.",""
+"MOVEMENT_SCALE","Hareket Ölçeği",""
+"MOVEMENT_SCALE_TOOLTIP","Kamera hareketinin hareket bulanıklığına ne kadar katkıda bulunduğunu kontrol eder.
+Daha yüksek değerler, kamera hareket ettiğinde daha belirgin bulanıklığa neden olur.",""
+"ROTATION_SCALE","Dönüş Ölçeği",""
+"ROTATION_SCALE_TOOLTIP","Kamera dönüşünün hareket bulanıklığına ne kadar katkıda bulunduğunu kontrol eder.
+Daha yüksek değerler, dönerken daha güçlü bulanıklığa neden olur.",""
+"MAX_VELOCITY","Maksimum Hız",""
+"MAX_VELOCITY_TOOLTIP","Hareket bulanıklığı izlerinin maksimum uzunluğunu ayarlar.
+Düşük değerler daha sıkı bir bulanıklık üretir; yüksek değerler daha uzun çizgilere izin verir.
+Yeniden yapılandırma tabanlı filtreler için bu değer 10 ile sınırlandırılmıştır.",""
+"MIN_VELOCITY","Minimum Hız",""
+"MIN_VELOCITY_TOOLTIP","Bulama uygulanmayan minimum hızı ayarlar.
+Düşük değerler, hafif hareketlerin bile bulanıklaşmasına neden olur.",""
+"VELOCITY_SCALE","Hız Ölçeği",""
+"VELOCITY_SCALE_TOOLTIP","Tüm hız vektörlerine uygulanan genel çarpan.
+Arttırmak, hareket bulanıklığı yoğunluğunu abartır.",""
+"SOFT_Z_DISTANCE","Yumuşak Z Mesafesi",""
+"SOFT_Z_DISTANCE_TOOLTIP","Derinlik farklarının bulanık geçişlerini nasıl etkilediğini ayarlar.
+Düşük değerler ön plan ve arka plan arasında daha keskin ayrım yaratır; yüksek değerler bunları yumuşak bir şekilde birleştirir.",""
+"JITTER","Titreşim",""
+"JITTER_TOOLTIP","Örnekleme konumlarına uygulanan rastgele kaydırma miktarı, bantlama artefaktlarını azaltmaya yardımcı olur.
+Daha yüksek değerler daha yumuşak bulanıklık oluşturur ancak görünür gürültüye neden olabilir.",""
+"TOGGLE_MOTION_BLUR","Hareket Bulanıklığını Aç/Kapat",""
+"TOGGLE_MOTION_BLUR_TOOLTIP","Tüm modlarda çalışır. Ancak yukarıda belirtilen bir moda geçildiğinde durum, o modun ayarları tarafından geçersiz kılınır.",""
+"RESET_SETTINGS","Ayarları Sıfırla",""
