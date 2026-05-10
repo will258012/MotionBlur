@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="AlgernonCommons/AlgernonCommonsPatchingShared.shproj" Id="25aef446-6f0d-43a8-bb84-d1306789b68c" />
+  <Project Path="MotionBlur.csproj" />
+</Solution>

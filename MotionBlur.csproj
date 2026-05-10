@@ -1,0 +1,73 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net35</TargetFramework>
+	  <OutputType>Library</OutputType>
+	  <Nullable>enable</Nullable>
+	  <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Resources_Source\**" />
+    <EmbeddedResource Remove="Resources_Source\**" />
+    <None Remove="Resources_Source\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CitiesHarmony.API" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\SteamLibrary\steamapps\common\Cities_Skylines\Cities_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\..\SteamLibrary\steamapps\common\Cities_Skylines\Cities_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ColossalManaged">
+      <HintPath>..\..\..\SteamLibrary\steamapps\common\Cities_Skylines\Cities_Data\Managed\ColossalManaged.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FPSCamera">
+      <HintPath>..\..\..\SteamLibrary\steamapps\workshop\content\255710\3198388677\FPSCamera.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FPSCamera.API">
+      <HintPath>..\..\..\SteamLibrary\steamapps\workshop\content\255710\3233229958\FPSCamera.API.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ICities">
+      <HintPath>..\..\..\SteamLibrary\steamapps\common\Cities_Skylines\Cities_Data\Managed\ICities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\SteamLibrary\steamapps\common\Cities_Skylines\Cities_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+	<ItemGroup>
+		<None Update="Translations\*.csv">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Resources\**\*.*">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+
+	</ItemGroup>
+
+	<Target Name="DeployToModDirectory" AfterTargets="Build">
+		<ItemGroup>
+			<TranslationsCore Include="AlgernonCommons\Translations\*.csv" />
+			<SourceDir Include="$(TargetDir)\**\*.*" />
+		</ItemGroup>
+		<PropertyGroup>
+			<DeployDir>$(LOCALAPPDATA)/Colossal Order/Cities_Skylines/Addons/Mods/$(ProjectName)/</DeployDir>
+		</PropertyGroup>
+		<Copy SourceFiles="@(SourceDir)" DestinationFolder="$(DeployDir)\%(RecursiveDir)" SkipUnchangedFiles="true" />
+		<Copy SourceFiles="@(TranslationsCore)" DestinationFolder="$(DeployDir)\Translations\Core" SkipUnchangedFiles="true" />
+	</Target>
+
+	<Import Project="AlgernonCommons\AlgernonCommonsPatchingShared.projitems" Label="Shared" />
+</Project>
