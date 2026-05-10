@@ -1,44 +1,44 @@
-﻿"LANGUAGE","English","Language name (in native language).  This means the NAME OF THE LANGUAGE BEING TRANSLATED INTO, and should NOT be a translation of the word 'English'"
-"MOD_DESCRIPTION","Add motion blur effect to the camera",""
-"ENABLE_MOTION_BLUR_IN","Enable motion blur in the following modes:",""
-"GAME","Game",""
-"MAP_EDITOR","Map Editor","Use the official Cities: Skylines translation for this term"
-"ASSET_EDITOR","Asset Editor","Use the official Cities: Skylines translation for this term"
-"THEME_EDITOR","Theme Editor","Use the official Cities: Skylines translation for this term"
-"SCENARIO_EDITOR","Scenario Editor","Use the official Cities: Skylines translation for this term"
-"VANILLA_CAM","Vanilla Camera Modes (Free Camera Mode & Cinematic Camera)","Use the official Cities: Skylines translation for this term"
-"FPC","Any mode of First Person Camera - Continued",""
-"ACME_FPS","FPS Mode of ACME",""
-"PARAM","Parameters",""
-"ALGO","Algorithm",""
-"ALGO_TOOLTIP","CameraMotion: Valve-style blur calculated from camera rotation and movement.
-LocalBlur: Simple blur along local velocity vectors.
-Reconstruction: Performs plausible motion blur using tile-based velocity estimation.
-ReconstructionDX11: Higher-quality version optimized for DirectX 11.
-ReconstructionDisc: Uses disc-shaped kernel sampling for performance.","Keep the algorithm names (such as CameraMotion) unchanged. You may append the translation in parentheses after the name, e.g. 'CameraMotion (YOUR TRANSLATION)'."
-"AVAILABLE_ONLY_TIP","This setting only applies when ""{0}"" is set to CameraMotion.",""
-"MOVEMENT_SCALE","Movement Scale",""
-"MOVEMENT_SCALE_TOOLTIP","Controls how much camera translation contributes to motion blur.
-Higher values result in more noticeable blur when the camera moves.",""
-"ROTATION_SCALE","Rotation Scale",""
-"ROTATION_SCALE_TOOLTIP","Controls how much camera rotation contributes to motion blur.
-Higher values result in stronger blur when turning.",""
-"MAX_VELOCITY","Max Velocity",""
-"MAX_VELOCITY_TOOLTIP","Sets the maximum length of motion blur trails.
-Lower values produce a tighter blur; higher values allow longer streaks.
-For Reconstruction-based filters, this value is capped at 10.",""
-"MIN_VELOCITY","Min Velocity",""
-"MIN_VELOCITY_TOOLTIP","Sets the minimum speed below which no blur is applied.
-Lower values cause even subtle motion to be blurred.",""
-"VELOCITY_SCALE","Velocity Scale",""
-"VELOCITY_SCALE_TOOLTIP","Global multiplier applied to all velocity vectors.
-Increase to exaggerate motion blur intensity.",""
-"SOFT_Z_DISTANCE","Soft Z Distance",""
-"SOFT_Z_DISTANCE_TOOLTIP","Adjusts how depth differences influence blur transitions.
-Lower values create sharper separation between foreground and background; higher values blend them smoothly.",""
+﻿"LANGUAGE","Deutsch","Language name (in native language).  This means the NAME OF THE LANGUAGE BEING TRANSLATED INTO, and should NOT be a translation of the word 'English'"
+"MOD_DESCRIPTION","Füge der Kamera einen Bewegungsunschärfeeffekt hinzu",""
+"ENABLE_MOTION_BLUR_IN","Aktiviere Bewegungsunschärfe in den folgenden Modi:",""
+"GAME","Spiel",""
+"MAP_EDITOR","Karten-Editor","Use the official Cities: Skylines translation for this term"
+"ASSET_EDITOR","Asset-Editor","Use the official Cities: Skylines translation for this term"
+"THEME_EDITOR","Themen-Editor","Use the official Cities: Skylines translation for this term"
+"SCENARIO_EDITOR","Szenario-Editor","Use the official Cities: Skylines translation for this term"
+"VANILLA_CAM","Standard-Kameramodi (Freie Kamera und Kino-Kamera)","Use the official Cities: Skylines translation for this term"
+"FPC","Jeder Modus von First Person Camera - Continued",""
+"ACME_FPS","FPS-Modus von ACME",""
+"PARAM","Parameter",""
+"ALGO","Algorithmus",""
+"ALGO_TOOLTIP","CameraMotion (Kamerabewegung): Valve-artige Unschärfe, berechnet aus Kamerarotation und -bewegung.
+LocalBlur (Lokale Unschärfe): Einfache Unschärfe entlang lokaler Geschwindigkeitsvektoren.
+Reconstruction (Rekonstruktion): Führt plausible Bewegungsunschärfe mittels kachelbasierter Geschwindigkeitsschätzung durch.
+ReconstructionDX11 (Rekonstruktion DX11): Höherwertige Version, optimiert für DirectX 11.
+ReconstructionDisc (Rekonstruktion Disc): Verwendet scheibenförmige Kernelabtastung für Leistung.","Keep the algorithm names (such as CameraMotion) unchanged. You may append the translation in parentheses after the name, e.g. 'CameraMotion (YOUR TRANSLATION)'."
+"AVAILABLE_ONLY_TIP","Diese Einstellung gilt nur, wenn ""{0}"" auf CameraMotion gesetzt ist.",""
+"MOVEMENT_SCALE","Bewegungsskala",""
+"MOVEMENT_SCALE_TOOLTIP","Steuert, wie stark die Kamerabewegung zur Bewegungsunschärfe beiträgt.
+Höhere Werte führen zu einer stärkeren Unschärfe, wenn sich die Kamera bewegt.",""
+"ROTATION_SCALE","Rotationsskala",""
+"ROTATION_SCALE_TOOLTIP","Steuert, wie stark die Kamerarrotation zur Bewegungsunschärfe beiträgt.
+Höhere Werte führen zu einer stärkeren Unschärfe beim Drehen.",""
+"MAX_VELOCITY","Höchstgeschwindigkeit",""
+"MAX_VELOCITY_TOOLTIP","Legt die maximale Länge der Bewegungsunschärfe-Spuren fest.
+Niedrigere Werte erzeugen eine kompaktere Unschärfe; höhere Werte ermöglichen längere Streifen.
+Bei rekonstruktionsbasierten Filtern ist dieser Wert auf 10 begrenzt.",""
+"MIN_VELOCITY","Minimale Geschwindigkeit",""
+"MIN_VELOCITY_TOOLTIP","Legt die Mindestgeschwindigkeit fest, unterhalb derer keine Unschärfe angewendet wird.
+Niedrigere Werte führen dazu, dass selbst leichte Bewegungen unscharf werden.",""
+"VELOCITY_SCALE","Geschwindigkeitsskala",""
+"VELOCITY_SCALE_TOOLTIP","Globaler Multiplikator, der auf alle Geschwindigkeitsvektoren angewendet wird.
+Erhöhen Sie, um die Bewegungsunschärfe-Intensität zu verstärken.",""
+"SOFT_Z_DISTANCE","Weicher Z-Abstand",""
+"SOFT_Z_DISTANCE_TOOLTIP","Passt an, wie Tiefenunterschiede die Unschärfeübergänge beeinflussen.
+Niedrigere Werte erzeugen eine schärfere Trennung zwischen Vordergrund und Hintergrund; höhere Werte vermischen sie sanft.",""
 "JITTER","Jitter",""
-"JITTER_TOOLTIP","The amount of random offset applied to sampling positions, which helps reduce banding artifacts.
-Higher values produce softer blur but may introduce visible noise.",""
-"TOGGLE_MOTION_BLUR","Toggle Motion Blur",""
-"TOGGLE_MOTION_BLUR_TOOLTIP","Works in all modes. However, when switching to a mode metioned above, the state will be overridden by its settings.",""
-"RESET_SETTINGS","Reset Settings",""
+"JITTER_TOOLTIP","Die Menge der zufälligen Verschiebung auf Abtastpositionen, die hilft, Banding-Artefakte zu reduzieren.
+Höhere Werte erzeugen weichere Unschärfe, können aber sichtbares Rauschen verursachen.",""
+"TOGGLE_MOTION_BLUR","Bewegungsunschärfe umschalten",""
+"TOGGLE_MOTION_BLUR_TOOLTIP","Funktioniert in allen Modi. Beim Wechsel zu einem oben genannten Modus wird der Zustand jedoch durch dessen Einstellungen überschrieben.",""
+"RESET_SETTINGS","Einstellungen zurücksetzen",""
