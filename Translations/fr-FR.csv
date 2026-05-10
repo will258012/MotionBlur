@@ -1,44 +1,44 @@
-﻿"LANGUAGE","English","Language name (in native language).  This means the NAME OF THE LANGUAGE BEING TRANSLATED INTO, and should NOT be a translation of the word 'English'"
-"MOD_DESCRIPTION","Add motion blur effect to the camera",""
-"ENABLE_MOTION_BLUR_IN","Enable motion blur in the following modes:",""
-"GAME","Game",""
-"MAP_EDITOR","Map Editor","Use the official Cities: Skylines translation for this term"
-"ASSET_EDITOR","Asset Editor","Use the official Cities: Skylines translation for this term"
-"THEME_EDITOR","Theme Editor","Use the official Cities: Skylines translation for this term"
-"SCENARIO_EDITOR","Scenario Editor","Use the official Cities: Skylines translation for this term"
-"VANILLA_CAM","Vanilla Camera Modes (Free Camera Mode & Cinematic Camera)","Use the official Cities: Skylines translation for this term"
-"FPC","Any mode of First Person Camera - Continued",""
-"ACME_FPS","FPS Mode of ACME",""
-"PARAM","Parameters",""
-"ALGO","Algorithm",""
-"ALGO_TOOLTIP","CameraMotion: Valve-style blur calculated from camera rotation and movement.
-LocalBlur: Simple blur along local velocity vectors.
-Reconstruction: Performs plausible motion blur using tile-based velocity estimation.
-ReconstructionDX11: Higher-quality version optimized for DirectX 11.
-ReconstructionDisc: Uses disc-shaped kernel sampling for performance.","Keep the algorithm names (such as CameraMotion) unchanged. You may append the translation in parentheses after the name, e.g. 'CameraMotion (YOUR TRANSLATION)'."
-"AVAILABLE_ONLY_TIP","This setting only applies when ""{0}"" is set to CameraMotion.",""
-"MOVEMENT_SCALE","Movement Scale",""
-"MOVEMENT_SCALE_TOOLTIP","Controls how much camera translation contributes to motion blur.
-Higher values result in more noticeable blur when the camera moves.",""
-"ROTATION_SCALE","Rotation Scale",""
-"ROTATION_SCALE_TOOLTIP","Controls how much camera rotation contributes to motion blur.
-Higher values result in stronger blur when turning.",""
-"MAX_VELOCITY","Max Velocity",""
-"MAX_VELOCITY_TOOLTIP","Sets the maximum length of motion blur trails.
-Lower values produce a tighter blur; higher values allow longer streaks.
-For Reconstruction-based filters, this value is capped at 10.",""
-"MIN_VELOCITY","Min Velocity",""
-"MIN_VELOCITY_TOOLTIP","Sets the minimum speed below which no blur is applied.
-Lower values cause even subtle motion to be blurred.",""
-"VELOCITY_SCALE","Velocity Scale",""
-"VELOCITY_SCALE_TOOLTIP","Global multiplier applied to all velocity vectors.
-Increase to exaggerate motion blur intensity.",""
-"SOFT_Z_DISTANCE","Soft Z Distance",""
-"SOFT_Z_DISTANCE_TOOLTIP","Adjusts how depth differences influence blur transitions.
-Lower values create sharper separation between foreground and background; higher values blend them smoothly.",""
-"JITTER","Jitter",""
-"JITTER_TOOLTIP","The amount of random offset applied to sampling positions, which helps reduce banding artifacts.
-Higher values produce softer blur but may introduce visible noise.",""
-"TOGGLE_MOTION_BLUR","Toggle Motion Blur",""
-"TOGGLE_MOTION_BLUR_TOOLTIP","Works in all modes. However, when switching to a mode metioned above, the state will be overridden by its settings.",""
-"RESET_SETTINGS","Reset Settings",""
+﻿"LANGUAGE","Français","Language name (in native language).  This means the NAME OF THE LANGUAGE BEING TRANSLATED INTO, and should NOT be a translation of the word 'English'"
+"MOD_DESCRIPTION","Ajouter un effet de flou de mouvement à la caméra",""
+"ENABLE_MOTION_BLUR_IN","Activer le flou de mouvement dans les modes suivants :",""
+"GAME","Jeu",""
+"MAP_EDITOR","Éditeur de carte","Use the official Cities: Skylines translation for this term"
+"ASSET_EDITOR","Éditeur d'actifs","Use the official Cities: Skylines translation for this term"
+"THEME_EDITOR","Éditeur de thème","Use the official Cities: Skylines translation for this term"
+"SCENARIO_EDITOR","Éditeur de scénario","Use the official Cities: Skylines translation for this term"
+"VANILLA_CAM","Modes de caméra vanilla (Mode caméra libre et Caméra cinématique)","Use the official Cities: Skylines translation for this term"
+"FPC","Tout mode de First Person Camera - Continued",""
+"ACME_FPS","Mode FPS de ACME",""
+"PARAM","Paramètres",""
+"ALGO","Algorithme",""
+"ALGO_TOOLTIP","CameraMotion : flou style Valve calculé à partir de la rotation et du mouvement de la caméra.
+LocalBlur : flou simple le long des vecteurs de vitesse locaux.
+Reconstruction : effectue un flou de mouvement plausible en utilisant une estimation de vélocité par tuiles.
+ReconstructionDX11 : version de meilleure qualité optimisée pour DirectX 11.
+ReconstructionDisc : utilise un échantillonnage en forme de disque pour les performances.","Keep the algorithm names (such as CameraMotion) unchanged. You may append the translation in parentheses after the name, e.g. 'CameraMotion (YOUR TRANSLATION)'."
+"AVAILABLE_ONLY_TIP","Ce réglage s'applique uniquement lorsque ""{0}"" est réglé sur CameraMotion.",""
+"MOVEMENT_SCALE","Échelle de mouvement",""
+"MOVEMENT_SCALE_TOOLTIP","Contrôle la contribution de la translation de la caméra au flou de mouvement.
+Des valeurs plus élevées entraînent un flou plus perceptible lors du déplacement de la caméra.",""
+"ROTATION_SCALE","Échelle de rotation",""
+"ROTATION_SCALE_TOOLTIP","Contrôle la contribution de la rotation de la caméra au flou de mouvement.
+Des valeurs plus élevées entraînent un flou plus fort lors des virages.",""
+"MAX_VELOCITY","Vitesse maximale",""
+"MAX_VELOCITY_TOOLTIP","Définit la longueur maximale des traînées de flou de mouvement.
+Des valeurs plus faibles produisent un flou plus serré ; des valeurs plus élevées permettent des traînées plus longues.
+Pour les filtres basés sur la reconstruction, cette valeur est plafonnée à 10.",""
+"MIN_VELOCITY","Vitesse minimale",""
+"MIN_VELOCITY_TOOLTIP","Définit la vitesse minimale en dessous de laquelle aucun flou n'est appliqué.
+Des valeurs plus faibles rendent flou même un mouvement subtil.",""
+"VELOCITY_SCALE","Échelle de vitesse",""
+"VELOCITY_SCALE_TOOLTIP","Multiplicateur global appliqué à tous les vecteurs de vitesse.
+Augmentez pour exagérer l'intensité du flou de mouvement.",""
+"SOFT_Z_DISTANCE","Distance Z douce",""
+"SOFT_Z_DISTANCE_TOOLTIP","Ajuste comment les différences de profondeur influencent les transitions de flou.
+Des valeurs plus faibles créent une séparation plus nette entre l'avant-plan et l'arrière-plan ; des valeurs plus élevées les mélangent en douceur.",""
+"JITTER","Gigue",""
+"JITTER_TOOLTIP","La quantité de décalage aléatoire appliquée aux positions d'échantillonnage, ce qui aide à réduire les artefacts de bande.
+Des valeurs plus élevées produisent un flou plus doux mais peuvent introduire un bruit visible.",""
+"TOGGLE_MOTION_BLUR","Activer/Désactiver le flou de mouvement",""
+"TOGGLE_MOTION_BLUR_TOOLTIP","Fonctionne dans tous les modes. Cependant, lors du passage à un mode mentionné ci-dessus, l'état sera remplacé par ses paramètres.",""
+"RESET_SETTINGS","Réinitialiser les paramètres",""
