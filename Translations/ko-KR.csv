@@ -1,44 +1,44 @@
-﻿"LANGUAGE","English","Language name (in native language).  This means the NAME OF THE LANGUAGE BEING TRANSLATED INTO, and should NOT be a translation of the word 'English'"
-"MOD_DESCRIPTION","Add motion blur effect to the camera",""
-"ENABLE_MOTION_BLUR_IN","Enable motion blur in the following modes:",""
-"GAME","Game",""
-"MAP_EDITOR","Map Editor","Use the official Cities: Skylines translation for this term"
-"ASSET_EDITOR","Asset Editor","Use the official Cities: Skylines translation for this term"
-"THEME_EDITOR","Theme Editor","Use the official Cities: Skylines translation for this term"
-"SCENARIO_EDITOR","Scenario Editor","Use the official Cities: Skylines translation for this term"
-"VANILLA_CAM","Vanilla Camera Modes (Free Camera Mode & Cinematic Camera)","Use the official Cities: Skylines translation for this term"
-"FPC","Any mode of First Person Camera - Continued",""
-"ACME_FPS","FPS Mode of ACME",""
-"PARAM","Parameters",""
-"ALGO","Algorithm",""
-"ALGO_TOOLTIP","CameraMotion: Valve-style blur calculated from camera rotation and movement.
-LocalBlur: Simple blur along local velocity vectors.
-Reconstruction: Performs plausible motion blur using tile-based velocity estimation.
-ReconstructionDX11: Higher-quality version optimized for DirectX 11.
-ReconstructionDisc: Uses disc-shaped kernel sampling for performance.","Keep the algorithm names (such as CameraMotion) unchanged. You may append the translation in parentheses after the name, e.g. 'CameraMotion (YOUR TRANSLATION)'."
-"AVAILABLE_ONLY_TIP","This setting only applies when ""{0}"" is set to CameraMotion.",""
-"MOVEMENT_SCALE","Movement Scale",""
-"MOVEMENT_SCALE_TOOLTIP","Controls how much camera translation contributes to motion blur.
-Higher values result in more noticeable blur when the camera moves.",""
-"ROTATION_SCALE","Rotation Scale",""
-"ROTATION_SCALE_TOOLTIP","Controls how much camera rotation contributes to motion blur.
-Higher values result in stronger blur when turning.",""
-"MAX_VELOCITY","Max Velocity",""
-"MAX_VELOCITY_TOOLTIP","Sets the maximum length of motion blur trails.
-Lower values produce a tighter blur; higher values allow longer streaks.
-For Reconstruction-based filters, this value is capped at 10.",""
-"MIN_VELOCITY","Min Velocity",""
-"MIN_VELOCITY_TOOLTIP","Sets the minimum speed below which no blur is applied.
-Lower values cause even subtle motion to be blurred.",""
-"VELOCITY_SCALE","Velocity Scale",""
-"VELOCITY_SCALE_TOOLTIP","Global multiplier applied to all velocity vectors.
-Increase to exaggerate motion blur intensity.",""
-"SOFT_Z_DISTANCE","Soft Z Distance",""
-"SOFT_Z_DISTANCE_TOOLTIP","Adjusts how depth differences influence blur transitions.
-Lower values create sharper separation between foreground and background; higher values blend them smoothly.",""
-"JITTER","Jitter",""
-"JITTER_TOOLTIP","The amount of random offset applied to sampling positions, which helps reduce banding artifacts.
-Higher values produce softer blur but may introduce visible noise.",""
-"TOGGLE_MOTION_BLUR","Toggle Motion Blur",""
-"TOGGLE_MOTION_BLUR_TOOLTIP","Works in all modes. However, when switching to a mode metioned above, the state will be overridden by its settings.",""
-"RESET_SETTINGS","Reset Settings",""
+﻿"LANGUAGE","한국어","Language name (in native language).  This means the NAME OF THE LANGUAGE BEING TRANSLATED INTO, and should NOT be a translation of the word 'English'"
+"MOD_DESCRIPTION","카메라에 모션 블러 효과 추가",""
+"ENABLE_MOTION_BLUR_IN","다음 모드에서 모션 블러 활성화:",""
+"GAME","게임",""
+"MAP_EDITOR","지도 편집기","Use the official Cities: Skylines translation for this term"
+"ASSET_EDITOR","에셋 편집기","Use the official Cities: Skylines translation for this term"
+"THEME_EDITOR","테마 편집기","Use the official Cities: Skylines translation for this term"
+"SCENARIO_EDITOR","시나리오 편집기","Use the official Cities: Skylines translation for this term"
+"VANILLA_CAM","바닐라 카메라 모드 (자유 카메라 모드 및 시네마틱 카메라)","Use the official Cities: Skylines translation for this term"
+"FPC","First Person Camera - Continued의 모든 모드",""
+"ACME_FPS","ACME의 FPS 모드",""
+"PARAM","매개변수",""
+"ALGO","알고리즘",""
+"ALGO_TOOLTIP","CameraMotion: 카메라 회전 및 이동으로 계산된 Valve 스타일 블러.
+LocalBlur: 로컬 속도 벡터를 따른 단순 블러.
+Reconstruction: 타일 기반 속도 추정을 사용하여 그럴듯한 모션 블러를 수행합니다.
+ReconstructionDX11: DirectX 11에 최적화된 고품질 버전.
+ReconstructionDisc: 성능을 위해 디스크 모양 커널 샘플링을 사용합니다.","Keep the algorithm names (such as CameraMotion) unchanged. You may append the translation in parentheses after the name, e.g. 'CameraMotion (YOUR TRANSLATION)'."
+"AVAILABLE_ONLY_TIP","이 설정은 ""{0}""이(가) CameraMotion으로 설정된 경우에만 적용됩니다.",""
+"MOVEMENT_SCALE","이동 스케일",""
+"MOVEMENT_SCALE_TOOLTIP","카메라 이동이 모션 블러에 기여하는 정도를 제어합니다.
+값이 높을수록 카메라가 움직일 때 블러가 더 눈에 띕니다.",""
+"ROTATION_SCALE","회전 스케일",""
+"ROTATION_SCALE_TOOLTIP","카메라 회전이 모션 블러에 기여하는 정도를 제어합니다.
+값이 높을수록 회전 시 블러가 더 강해집니다.",""
+"MAX_VELOCITY","최대 속도",""
+"MAX_VELOCITY_TOOLTIP","모션 블러 궤적의 최대 길이를 설정합니다.
+값이 낮을수록 블러가 더 타이트해지고, 값이 높을수록 더 긴 스트릭이 허용됩니다.
+Reconstruction 기반 필터의 경우 이 값은 10으로 제한됩니다.",""
+"MIN_VELOCITY","최소 속도",""
+"MIN_VELOCITY_TOOLTIP","블러가 적용되지 않는 최소 속도를 설정합니다.
+값이 낮을수록 미세한 움직임도 블러 처리됩니다.",""
+"VELOCITY_SCALE","속도 배율",""
+"VELOCITY_SCALE_TOOLTIP","모든 속도 벡터에 적용되는 전역 배수입니다.
+값을 높이면 모션 블러 강도가 증가합니다.",""
+"SOFT_Z_DISTANCE","소프트 Z 거리",""
+"SOFT_Z_DISTANCE_TOOLTIP","깊이 차이가 블러 전환에 미치는 영향을 조정합니다.
+값이 낮을수록 전경과 배경의 분리가 더 선명해지고, 값이 높을수록 부드럽게 혼합됩니다.",""
+"JITTER","지터",""
+"JITTER_TOOLTIP","샘플링 위치에 적용되는 무작위 오프셋 양으로, 밴딩 아티팩트를 줄이는 데 도움이 됩니다.
+값이 높을수록 더 부드러운 블러를 생성하지만 가시적인 노이즈가 발생할 수 있습니다.",""
+"TOGGLE_MOTION_BLUR","모션 블러 전환",""
+"TOGGLE_MOTION_BLUR_TOOLTIP","모든 모드에서 작동합니다. 그러나 위에서 언급한 모드로 전환하면 해당 모드의 설정에 의해 상태가 재정의됩니다.",""
+"RESET_SETTINGS","설정 초기화",""
