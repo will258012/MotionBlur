@@ -1,5 +1,8 @@
 ﻿using AlgernonCommons.Keybinding;
+using ColossalFramework;
 using ColossalFramework.UI;
+using FPSCamera.Cam;
+using FPSCamera.Cam.Controller;
 using ICities;
 using MotionBlur.Settings;
 using UnityEngine;
@@ -8,13 +11,11 @@ namespace MotionBlur;
 
 public class UIThreading : ThreadingExtensionBase
 {
-    private bool _initialized = false;
     public AudioClip ToggleSound
     {
         get
         {
-            if (field == null)
-                field = UIView.GetAView().defaultClickSound;
+            field ??= UIView.GetAView().defaultClickSound;
             return field;
         }
     }
@@ -22,32 +23,72 @@ public class UIThreading : ThreadingExtensionBase
     {
         get
         {
-            if (field == null)
-                field = UIView.GetAView().defaultDisabledClickSound;
+            field ??= UIView.GetAView().defaultDisabledClickSound;
             return field;
         }
     }
+
+    public readonly static int CitizensLayer = LayerMask.NameToLayer("Citizens");
+    public readonly static int VehicleLayer = LayerMask.NameToLayer("Vehicles");
+
+    private bool triedInitialized = false;
+    private int excludeLayers;
     public override void OnUpdate(float realTimeDelta, float simulationTimeDelta)
     {
-        if (!_initialized)
+
+        if (!triedInitialized)
         {
-            if (!Mod.Instance.IsMotionBlurReady && Mod.Instance.MainCamera != null)
+            if (Mod.Instance.MainCamera != null)
             {
                 if (Mod.Instance.InitializeMotionBlur())
                 {
                     Mod.Instance.ApplySettings();
-                    _initialized = true;
                 }
+                triedInitialized = true;
             }
-
             return;
         }
+
         if (KeyTriggered(ModSettings.ToggleKey))
         {
             if (Mod.Instance.ToggleMotionBlur().HasValue)
                 AudioManager.instance.PlaySound(ToggleSound, 1f);
             else
                 AudioManager.instance.PlaySound(DisabledToggleSound, 1f);
+        }
+
+        if (!Mod.Instance.IsMotionBlurEnabled) return;
+
+        // Exclude layers based on camera target
+        excludeLayers = default;
+
+        if (Mod.Instance.isFPSCameraEnabled)
+            CheckFPSCameraTarget();
+        else if (ToolsModifierControl.cameraController.GetTarget().Type == InstanceType.Vehicle)
+            excludeLayers |= 1 << VehicleLayer;
+        else if (ToolsModifierControl.cameraController.GetTarget().Type is InstanceType.Citizen or InstanceType.CitizenInstance)
+            excludeLayers |= 1 << CitizensLayer;
+
+        if (excludeLayers != default)
+            if (!ToolsModifierControl.cameraController.GetTarget().IsEmpty)
+                Shader.SetGlobalFloat("_ClearDistance", Mathf.Clamp(ToolsModifierControl.cameraController.m_targetSize, 15f, 200f));
+            else if (FPSCamController.Instance.Status.IsFlagSet(FPSCamController.CamStatus.Enabled))
+                Shader.SetGlobalFloat("_ClearDistance", 15f);
+
+        CameraMotionBlur.excludeLayers = excludeLayers;
+    }
+    private void CheckFPSCameraTarget()
+    {
+        if (FPSCamController.Instance.FPSCam is IFollowCam followCam)
+        {
+            if (followCam.FollowInstance.Type == InstanceType.Vehicle)
+                excludeLayers |= 1 << VehicleLayer;
+            if (followCam.FollowInstance.Type == InstanceType.Citizen)
+                excludeLayers |= 1 << CitizensLayer;
+        }
+        else if (FPSCamController.Instance.Status.IsFlagSet(FPSCamController.CamStatus.PluginEnabled))
+        {
+            excludeLayers |= 1 << VehicleLayer;
         }
     }
     private static bool KeyTriggered(Keybinding key)

@@ -5,6 +5,8 @@
 	  <OutputType>Library</OutputType>
 	  <Nullable>enable</Nullable>
 	  <LangVersion>latest</LangVersion>
+	  <Version>1.0.1</Version>
+	  <Company>will258012</Company>
   </PropertyGroup>
 
   <ItemGroup>
