@@ -35,7 +35,7 @@ ReconstructionDisc：使用圓盤形採樣核，效能更佳。","Keep the algor
 增大此值可增加動態模糊強度。",""
 "VELOCITY_DOWNSAMPLE","速度降取樣因子",""
 "VELOCITY_DOWNSAMPLE_TOOLTIP","設置為1表示禁用降取樣；較高的值會降低動態模糊的品質以提高性能。",""
-"SOFT_Z_DISTANCE","深度軟過渡",""
+"SOFT_Z_DISTANCE","軟深度過渡距離",""
 "SOFT_Z_DISTANCE_TOOLTIP","調整深度差異對模糊過渡的影響。
 數值越低，前景與背景的分離越清晰；數值越高，過渡越平滑。",""
 "JITTER","抖動",""
