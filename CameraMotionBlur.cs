@@ -32,18 +32,9 @@ public class CameraMotionBlur : PostEffectsBase
     }
 
     // settings		
-    public static MotionBlurFilter filterType => ModSettings.FilterType;
     public bool preview = false;                // show how blur would look like in action ...
     public Vector3 previewScale = Vector3.one;  // ... given this movement vector
 
-    // params
-    public static float movementScale => ModSettings.MovementScale;
-    public static float rotationScale => ModSettings.RotationScale;
-    public static float maxVelocity => ModSettings.MaxVelocity;    // maximum velocity in pixels
-    public static float minVelocity => ModSettings.MinVelocity;    // minimum velocity in pixels
-    public static float velocityScale => ModSettings.VelocityScale;    // global velocity scale
-    public static float softZDistance => ModSettings.SoftZDistance;    // for z overlap check softness (reconstruction filter only)
-    public static int velocityDownsample => ModSettings.VelocityDownsample;  // low resolution velocity buffer? (optimization)
     public static LayerMask excludeLayers = 0;
     //public LayerMask dynamicLayers = 0;
 
@@ -58,7 +49,6 @@ public class CameraMotionBlur : PostEffectsBase
     private Material dx11MotionBlurMaterial = null;
 
     public Texture2D noiseTexture = null;
-    public static float jitter => ModSettings.Jitter;
 
     // (internal) debug
     public bool showVelocity = false;
@@ -122,7 +112,7 @@ public class CameraMotionBlur : PostEffectsBase
         CheckSupport(true, true); // depth & hdr needed
         motionBlurMaterial = CheckShaderAndCreateMaterial(shader, motionBlurMaterial);
 
-        if (supportDX11 && filterType == MotionBlurFilter.ReconstructionDX11)
+        if (supportDX11 && ModSettings.FilterType == MotionBlurFilter.ReconstructionDX11)
         {
             dx11MotionBlurMaterial = CheckShaderAndCreateMaterial(dx11MotionBlurShader, dx11MotionBlurMaterial);
         }
@@ -141,7 +131,7 @@ public class CameraMotionBlur : PostEffectsBase
             return;
         }
 
-        if (filterType == MotionBlurFilter.CameraMotion)
+        if (ModSettings.FilterType == MotionBlurFilter.CameraMotion)
             StartFrame();
 
         // use if possible new RG format ... fallback to half otherwise
@@ -149,27 +139,27 @@ public class CameraMotionBlur : PostEffectsBase
 
         // get temp textures
         // Fixed "RenderTexture.Create: Depth|ShadowMap RenderTexture requested without a depth buffer. Changing to a 16 bit depth buffer."
-        RenderTexture velBuffer = RenderTexture.GetTemporary(divRoundUp(source.width, velocityDownsample), divRoundUp(source.height, velocityDownsample), 24, rtFormat);
+        RenderTexture velBuffer = RenderTexture.GetTemporary(divRoundUp(source.width, ModSettings.VelocityDownsample), divRoundUp(source.height, ModSettings.VelocityDownsample), 24, rtFormat);
         int tileWidth = 1;
         int tileHeight = 1;
 
-        float _maxVelocity = Mathf.Max(2.0f, maxVelocity); // calculate 'k'
+        float _maxVelocity = Mathf.Max(2.0f, ModSettings.MaxVelocity); // calculate 'k'
                                           // note: 's' is hardcoded in shaders except for DX11 path
 
         // auto DX11 fallback!
-        bool fallbackFromDX11 = filterType == MotionBlurFilter.ReconstructionDX11 && dx11MotionBlurMaterial == null;
+        bool fallbackFromDX11 = ModSettings.FilterType == MotionBlurFilter.ReconstructionDX11 && dx11MotionBlurMaterial == null;
 
-        if (filterType == MotionBlurFilter.Reconstruction || fallbackFromDX11 || filterType == MotionBlurFilter.ReconstructionDisc)
+        if (ModSettings.FilterType == MotionBlurFilter.Reconstruction || fallbackFromDX11 || ModSettings.FilterType == MotionBlurFilter.ReconstructionDisc)
         {
             _maxVelocity = Mathf.Min(_maxVelocity, MAX_RADIUS);
-            tileWidth = divRoundUp(velBuffer.width, (int)maxVelocity);
-            tileHeight = divRoundUp(velBuffer.height, (int)maxVelocity);
+            tileWidth = divRoundUp(velBuffer.width, (int)ModSettings.MaxVelocity);
+            tileHeight = divRoundUp(velBuffer.height, (int)ModSettings.MaxVelocity);
             _maxVelocity = velBuffer.width / tileWidth;
         }
         else
         {
-            tileWidth = divRoundUp(velBuffer.width, (int)maxVelocity);
-            tileHeight = divRoundUp(velBuffer.height, (int)maxVelocity);
+            tileWidth = divRoundUp(velBuffer.width, (int)ModSettings.MaxVelocity);
+            tileHeight = divRoundUp(velBuffer.height, (int)ModSettings.MaxVelocity);
             _maxVelocity = velBuffer.width / tileWidth;
         }
 
@@ -202,9 +192,9 @@ public class CameraMotionBlur : PostEffectsBase
 
         motionBlurMaterial.SetFloat("_MaxVelocity", _maxVelocity);
         motionBlurMaterial.SetFloat("_MaxRadiusOrKInPaper", _maxVelocity);
-        motionBlurMaterial.SetFloat("_MinVelocity", minVelocity);
-        motionBlurMaterial.SetFloat("_VelocityScale", velocityScale);
-        motionBlurMaterial.SetFloat("_Jitter", jitter);
+        motionBlurMaterial.SetFloat("_MinVelocity", ModSettings.MinVelocity);
+        motionBlurMaterial.SetFloat("_VelocityScale", ModSettings.VelocityScale);
+        motionBlurMaterial.SetFloat("_Jitter", ModSettings.Jitter);
 
         // texture samplers
         motionBlurMaterial.SetTexture("_NoiseTex", noiseTexture);
@@ -224,7 +214,7 @@ public class CameraMotionBlur : PostEffectsBase
             motionBlurMaterial.SetMatrix("_ToPrevViewProjCombined", prevViewProjMat * invViewPrj);
         }
 
-        if (filterType == MotionBlurFilter.CameraMotion)
+        if (ModSettings.FilterType == MotionBlurFilter.CameraMotion)
         {
             // build blur vector to be used in shader to create a global blur direction
             Vector4 blurVector = Vector4.zero;
@@ -238,24 +228,24 @@ public class CameraMotionBlur : PostEffectsBase
 
             // pitch (vertical)
             farHeur = (Vector3.Angle(transform.up, prevFrameUp) / GetComponent<Camera>().fieldOfView) * (source.width * 0.75f);
-            blurVector.x = rotationScale * farHeur;//Mathf.Clamp01((1.0ff-Vector3.Dot(transform.up, prevFrameUp)));
+            blurVector.x = ModSettings.RotationScale * farHeur;//Mathf.Clamp01((1.0ff-Vector3.Dot(transform.up, prevFrameUp)));
 
             // yaw #1 (horizontal, faded by pitch)
             farHeur = (Vector3.Angle(transform.forward, prevFrameForward) / GetComponent<Camera>().fieldOfView) * (source.width * 0.75f);
-            blurVector.y = rotationScale * lookUpDown * farHeur;//Mathf.Clamp01((1.0ff-Vector3.Dot(transform.forward, prevFrameForward)));
+            blurVector.y = ModSettings.RotationScale * lookUpDown * farHeur;//Mathf.Clamp01((1.0ff-Vector3.Dot(transform.forward, prevFrameForward)));
 
             // yaw #2 (when looking down, faded by 1-pitch)
             farHeur = (Vector3.Angle(transform.forward, prevFrameForward) / GetComponent<Camera>().fieldOfView) * (source.width * 0.75f);
-            blurVector.z = rotationScale * (1.0f - lookUpDown) * farHeur;//Mathf.Clamp01((1.0ff-Vector3.Dot(transform.forward, prevFrameForward)));
+            blurVector.z = ModSettings.RotationScale * (1.0f - lookUpDown) * farHeur;//Mathf.Clamp01((1.0ff-Vector3.Dot(transform.forward, prevFrameForward)));
 
-            if (distMag > Mathf.Epsilon && movementScale > Mathf.Epsilon)
+            if (distMag > Mathf.Epsilon && ModSettings.MovementScale > Mathf.Epsilon)
             {
                 // forward (probably most important)
-                blurVector.w = movementScale * (Vector3.Dot(transform.forward, distanceVector)) * (source.width * 0.5f);
+                blurVector.w = ModSettings.MovementScale * (Vector3.Dot(transform.forward, distanceVector)) * (source.width * 0.5f);
                 // jump (maybe scale down further)
-                blurVector.x += movementScale * (Vector3.Dot(transform.up, distanceVector)) * (source.width * 0.5f);
+                blurVector.x += ModSettings.MovementScale * (Vector3.Dot(transform.up, distanceVector)) * (source.width * 0.5f);
                 // strafe (maybe scale down further)
-                blurVector.y += movementScale * (Vector3.Dot(transform.right, distanceVector)) * (source.width * 0.5f);
+                blurVector.y += ModSettings.MovementScale * (Vector3.Dot(transform.right, distanceVector)) * (source.width * 0.5f);
             }
 
             if (preview) // crude approximation
@@ -283,7 +273,6 @@ public class CameraMotionBlur : PostEffectsBase
                 // Fixed "Dimensions of color surface does not match dimensions of depth surface"
                 cam.pixelRect = new Rect(0, 0, velBuffer.width, velBuffer.height);
                 cam.aspect = (float)velBuffer.width / velBuffer.height;
-                cam.renderingPath = RenderingPath.Forward;
 
                 cam.cullingMask = excludeLayers;
                 cam.RenderWithShader(replacementClear, "");
@@ -328,19 +317,19 @@ public class CameraMotionBlur : PostEffectsBase
         }
         else
         {
-            if (filterType == MotionBlurFilter.ReconstructionDX11 && !fallbackFromDX11)
+            if (ModSettings.FilterType == MotionBlurFilter.ReconstructionDX11 && !fallbackFromDX11)
             {
                 // need to reset some parameters for dx11 shader
-                dx11MotionBlurMaterial.SetFloat("_MinVelocity", minVelocity);
-                dx11MotionBlurMaterial.SetFloat("_VelocityScale", velocityScale);
-                dx11MotionBlurMaterial.SetFloat("_Jitter", jitter);
+                dx11MotionBlurMaterial.SetFloat("_MinVelocity", ModSettings.MinVelocity);
+                dx11MotionBlurMaterial.SetFloat("_VelocityScale", ModSettings.VelocityScale);
+                dx11MotionBlurMaterial.SetFloat("_Jitter", ModSettings.Jitter);
 
                 // texture samplers
                 dx11MotionBlurMaterial.SetTexture("_NoiseTex", noiseTexture);
                 dx11MotionBlurMaterial.SetTexture("_VelTex", velBuffer);
                 dx11MotionBlurMaterial.SetTexture("_NeighbourMaxTex", neighbourMax);
 
-                dx11MotionBlurMaterial.SetFloat("_SoftZDistance", Mathf.Max(0.00025f, softZDistance));
+                dx11MotionBlurMaterial.SetFloat("_SoftZDistance", Mathf.Max(0.00025f, ModSettings.SoftZDistance));
                 dx11MotionBlurMaterial.SetFloat("_MaxRadiusOrKInPaper", _maxVelocity);
 
                 // generate tile max and neighbour max		
@@ -350,10 +339,10 @@ public class CameraMotionBlur : PostEffectsBase
                 // final blur
                 Graphics.Blit(source, destination, dx11MotionBlurMaterial, 2);
             }
-            else if (filterType == MotionBlurFilter.Reconstruction || fallbackFromDX11)
+            else if (ModSettings.FilterType == MotionBlurFilter.Reconstruction || fallbackFromDX11)
             {
                 // 'reconstructing' properly integrated color
-                motionBlurMaterial.SetFloat("_SoftZDistance", Mathf.Max(0.00025f, softZDistance));
+                motionBlurMaterial.SetFloat("_SoftZDistance", Mathf.Max(0.00025f, ModSettings.SoftZDistance));
 
                 // generate tile max and neighbour max		
                 Graphics.Blit(velBuffer, tileMax, motionBlurMaterial, 2);
@@ -362,16 +351,16 @@ public class CameraMotionBlur : PostEffectsBase
                 // final blur
                 Graphics.Blit(source, destination, motionBlurMaterial, 4);
             }
-            else if (filterType == MotionBlurFilter.CameraMotion)
+            else if (ModSettings.FilterType == MotionBlurFilter.CameraMotion)
             {
                 // orange box style motion blur
                 Graphics.Blit(source, destination, motionBlurMaterial, 6);
             }
-            else if (filterType == MotionBlurFilter.ReconstructionDisc)
+            else if (ModSettings.FilterType == MotionBlurFilter.ReconstructionDisc)
             {
                 // dof style motion blur defocuing and ellipse around the princical blur direction
                 // 'reconstructing' properly integrated color
-                motionBlurMaterial.SetFloat("_SoftZDistance", Mathf.Max(0.00025f, softZDistance));
+                motionBlurMaterial.SetFloat("_SoftZDistance", Mathf.Max(0.00025f, ModSettings.SoftZDistance));
 
                 // generate tile max and neighbour max		
                 Graphics.Blit(velBuffer, tileMax, motionBlurMaterial, 2);
@@ -421,6 +410,7 @@ public class CameraMotionBlur : PostEffectsBase
         tmpCam.GetComponent<Camera>().enabled = false;
         tmpCam.GetComponent<Camera>().depthTextureMode = DepthTextureMode.None;
         tmpCam.GetComponent<Camera>().clearFlags = CameraClearFlags.Nothing;
+        tmpCam.GetComponent<Camera>().renderingPath = RenderingPath.Forward;
 
         return tmpCam.GetComponent<Camera>();
     }
