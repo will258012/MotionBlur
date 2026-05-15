@@ -16,7 +16,7 @@ LocalBlur: Blur sederhana di sepanjang vektor kecepatan lokal.
 Reconstruction: Melakukan motion blur yang masuk akal menggunakan estimasi kecepatan berbasis tile.
 ReconstructionDX11: Versi kualitas lebih tinggi yang dioptimalkan untuk DirectX 11.
 ReconstructionDisc: Menggunakan sampling kernel berbentuk cakram untuk performa.","Keep the algorithm names (such as CameraMotion) unchanged. You may append the translation in parentheses after the name, e.g. 'CameraMotion (YOUR TRANSLATION)'."
-"AVAILABLE_ONLY_TIP","This setting only applies when ""{0}"" is set to ""{1}"".",""
+"AVAILABLE_ONLY_TIP","Pengaturan ini hanya berlaku ketika ""{0}"" diatur ke ""{1}"".",""
 "MOVEMENT_SCALE","Skala Gerakan",""
 "MOVEMENT_SCALE_TOOLTIP","Mengontrol seberapa besar translasi kamera berkontribusi pada blur gerakan.
 Nilai yang lebih tinggi menghasilkan blur yang lebih terlihat saat kamera bergerak.",""
@@ -33,8 +33,8 @@ Nilai yang lebih rendah menyebabkan gerakan halus pun menjadi blur.",""
 "VELOCITY_SCALE","Skala Kecepatan",""
 "VELOCITY_SCALE_TOOLTIP","Pengganda global yang diterapkan pada semua vektor kecepatan.
 Tingkatkan untuk memperbesar intensitas blur gerakan.",""
-"VELOCITY_DOWNSAMPLE","Velocity Downsample Factor",""
-"VELOCITY_DOWNSAMPLE_TOOLTIP","Set to 1 means no downsampling; higher values reduce quality of motion blur but improve performance.",""
+"VELOCITY_DOWNSAMPLE","Faktor Downsample Kecepatan",""
+"VELOCITY_DOWNSAMPLE_TOOLTIP","Disetel ke 1 berarti tidak ada downsampling; nilai yang lebih tinggi mengurangi kualitas motion blur tetapi meningkatkan performa.",""
 "SOFT_Z_DISTANCE","Jarak Z Lembut",""
 "SOFT_Z_DISTANCE_TOOLTIP","Menyesuaikan bagaimana perbedaan kedalaman mempengaruhi transisi blur.
 Nilai yang lebih rendah menciptakan pemisahan yang lebih tajam antara latar depan dan latar belakang; nilai yang lebih tinggi menggabungkannya dengan mulus.",""
