@@ -35,7 +35,7 @@ ReconstructionDisc：使用圆盘形采样核，性能更佳。","Keep the algor
 增大此值可增加动态模糊强度。",""
 "VELOCITY_DOWNSAMPLE","速度降采样因子",""
 "VELOCITY_DOWNSAMPLE_TOOLTIP","设置为1表示禁用降采样；较高的值会降低动态模糊的质量以提高性能。",""
-"SOFT_Z_DISTANCE","深度软过渡",""
+"SOFT_Z_DISTANCE","软深度过渡距离",""
 "SOFT_Z_DISTANCE_TOOLTIP","调整深度差异对模糊过渡的影响。
 数值越低，前景与背景的分离越清晰；数值越高，过渡越平滑。",""
 "JITTER","抖动",""
