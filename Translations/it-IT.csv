@@ -16,7 +16,7 @@ LocalBlur (Sfocatura locale): semplice sfocatura lungo i vettori di velocità lo
 Reconstruction (Ricostruzione): esegue una sfocatura di movimento plausibile utilizzando la stima della velocità basata su tile.
 ReconstructionDX11 (Ricostruzione DX11): versione di qualità superiore ottimizzata per DirectX 11.
 ReconstructionDisc (Ricostruzione a disco): utilizza il campionamento del kernel a forma di disco per le prestazioni.","Keep the algorithm names (such as CameraMotion) unchanged. You may append the translation in parentheses after the name, e.g. 'CameraMotion (YOUR TRANSLATION)'."
-"AVAILABLE_ONLY_TIP","Questa impostazione si applica solo quando ""{0}"" è impostato su CameraMotion.",""
+"AVAILABLE_ONLY_TIP","This setting only applies when ""{0}"" is set to ""{1}"".",""
 "MOVEMENT_SCALE","Scala di movimento",""
 "MOVEMENT_SCALE_TOOLTIP","Controlla quanto la traslazione della telecamera contribuisce alla sfocatura da movimento.
 Valori più alti producono una sfocatura più evidente quando la telecamera si muove.",""
@@ -33,6 +33,8 @@ Valori più bassi causano la sfocatura anche di movimenti sottili.",""
 "VELOCITY_SCALE","Scala di velocità",""
 "VELOCITY_SCALE_TOOLTIP","Moltiplicatore globale applicato a tutti i vettori di velocità.
 Aumenta per esagerare l'intensità della sfocatura da movimento.",""
+"VELOCITY_DOWNSAMPLE","Velocity Downsample Factor",""
+"VELOCITY_DOWNSAMPLE_TOOLTIP","Set to 1 means no downsampling; higher values reduce quality of motion blur but improve performance.",""
 "SOFT_Z_DISTANCE","Distanza Z morbida",""
 "SOFT_Z_DISTANCE_TOOLTIP","Regola come le differenze di profondità influenzano le transizioni della sfocatura.
 Valori più bassi creano una separazione più netta tra primo piano e sfondo; valori più alti li fondono in modo uniforme.",""
