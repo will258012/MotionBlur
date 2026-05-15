@@ -1,6 +1,6 @@
  /*
  	NOTES: see CameraMotionBlur.shader
-	https://github.com/Unity-Technologies/ScriptableRenderLoopScenes/blob/f218c5565e7b81145d3ada2577aa97841b100d3a/BenchRenderVikingVillageStatic/Standard%20Assets/Image%20Effects%20(Pro%20Only)/_Sources/Shaders/CameraMotionBlurDX11.shader
+	https://github.com/unity3d-jp/UnityChanBallRoll/blob/26ea0a89f71a1c4d71d708662ed2f139e3b66f3f/Assets/Etc/Effects/ImageEffects/Shaders/CameraMotionBlurDX11.shader
  */
  
  Shader "Hidden/CameraMotionBlurDX11" {

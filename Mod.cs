@@ -1,14 +1,12 @@
 ﻿using AlgernonCommons;
 using AlgernonCommons.Patching;
 using AlgernonCommons.Translation;
-using AlgernonCommons.UI;
 using FPSCamera.Cam.Controller;
 using ICities;
 using MotionBlur.Settings;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
-using UnityStandardAssets.ImageEffects;
 
 namespace MotionBlur;
 
@@ -21,7 +19,7 @@ public class Mod : PatcherMod<OptionsPanel, PatcherBase>, IUserMod
     public override void LoadSettings() => ModSettings.Load();
     public override void SaveSettings() { ModSettings.Save(); ApplySettings(); }
     public new static Mod Instance { get; private set; }
-
+    public AppMode LoadingMode { get; internal set; }
     /// <summary>
     /// Toggles the motion blur effect on or off.
     /// </summary>
@@ -40,6 +38,11 @@ public class Mod : PatcherMod<OptionsPanel, PatcherBase>, IUserMod
     /// Indicates whether the motion blur component has been initialized and is ready for use.
     /// </summary>
     public bool IsMotionBlurReady => cameraMotionBlur != null;
+
+    /// <summary>
+    /// Indicates whether the motion blur component has been enabled.
+    /// </summary>
+    public bool IsMotionBlurEnabled => cameraMotionBlur?.enabled ?? false;
     internal bool InitializeMotionBlur()
     {
         if (MainCamera == null)
@@ -47,7 +50,6 @@ public class Mod : PatcherMod<OptionsPanel, PatcherBase>, IUserMod
             Logging.Error("MainCamera is null, cannot initialize motion blur");
             return false;
         }
-
         cameraMotionBlur = MainCamera.gameObject.GetComponent<CameraMotionBlur>()
                         ?? MainCamera.gameObject.AddComponent<CameraMotionBlur>();
         if (!LoadMotionBlurShaders())
@@ -112,10 +114,11 @@ public class Mod : PatcherMod<OptionsPanel, PatcherBase>, IUserMod
             cameraMotionBlur!.shader = bundle.LoadAsset<Shader>("CameraMotionBlur");
             cameraMotionBlur.dx11MotionBlurShader = bundle.LoadAsset<Shader>("CameraMotionBlurDX11");
             cameraMotionBlur.noiseTexture = bundle.LoadAsset<Texture2D>("MotionBlurJitter");
+            cameraMotionBlur.replacementClear = bundle.LoadAsset<Shader>("MotionBlurClear");
 
             bundle.Unload(false);
 
-            if (cameraMotionBlur.shader == null || cameraMotionBlur.dx11MotionBlurShader == null || cameraMotionBlur.noiseTexture == null)
+            if (!cameraMotionBlur.shader || !cameraMotionBlur.dx11MotionBlurShader || !cameraMotionBlur.noiseTexture || !cameraMotionBlur.replacementClear)
             {
                 Logging.Error("Shaders or/and noise texture not found in the AssetBundle");
                 return false;
@@ -145,8 +148,6 @@ public class Mod : PatcherMod<OptionsPanel, PatcherBase>, IUserMod
             cameraMotionBlur?.enabled = forceSet.Value;
         else
             ApplyLoadingModeSettings();
-
-        ApplyMotionBlurParameters();
     }
     private void ApplyLoadingModeSettings()
     {
@@ -164,18 +165,6 @@ public class Mod : PatcherMod<OptionsPanel, PatcherBase>, IUserMod
                 break;
         }
     }
-    private void ApplyMotionBlurParameters()
-    {
-        cameraMotionBlur!.filterType = ModSettings.FilterType;
-        cameraMotionBlur.movementScale = ModSettings.MovementScale;
-        cameraMotionBlur.rotationScale = ModSettings.RotationScale;
-        cameraMotionBlur.maxVelocity = ModSettings.MaxVelocity;
-        cameraMotionBlur.minVelocity = ModSettings.MinVelocity;
-        cameraMotionBlur.velocityScale = ModSettings.VelocityScale;
-        cameraMotionBlur.velocityDownsample = ModSettings.VelocityDownsample;
-        cameraMotionBlur.softZDistance = ModSettings.SoftZDistance;
-        cameraMotionBlur.jitter = ModSettings.Jitter;
-    }
 
     private void RegisterInFPSCamera()
     {
@@ -190,13 +179,15 @@ public class Mod : PatcherMod<OptionsPanel, PatcherBase>, IUserMod
         FPSCamController.OnCameraDisabled -= OnFPSCameraDisabled;
     }
 
-    private void OnFPSCameraEnabled() => ApplySettings(ModSettings.EnabledInFPSCamera);
-    private void OnFPSCameraDisabled() => ApplySettings();
+    private void OnFPSCameraEnabled() { isFPSCameraEnabled = true; ApplySettings(ModSettings.EnabledInFPSCamera); }
+    private void OnFPSCameraDisabled() { isFPSCameraEnabled = false; ApplySettings(); }
 
 
-    public Camera MainCamera => RenderManager.instance.CurrentCameraInfo.m_camera;
+    public Camera MainCamera => ToolsModifierControl.cameraController.m_camera;
     private CameraMotionBlur? cameraMotionBlur;
-    public AppMode LoadingMode { get; internal set; }
+
+    internal bool isFPSCameraEnabled;
+
 }
 public class Loading : PatcherLoadingBase<OptionsPanel, PatcherBase>
 {

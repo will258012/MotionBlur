@@ -16,7 +16,7 @@ LocalBlur: Simple blur along local velocity vectors.
 Reconstruction: Performs plausible motion blur using tile-based velocity estimation.
 ReconstructionDX11: Higher-quality version optimized for DirectX 11.
 ReconstructionDisc: Uses disc-shaped kernel sampling for performance.","Keep the algorithm names (such as CameraMotion) unchanged. You may append the translation in parentheses after the name, e.g. 'CameraMotion (YOUR TRANSLATION)'."
-"AVAILABLE_ONLY_TIP","This setting only applies when ""{0}"" is set to CameraMotion."
+"AVAILABLE_ONLY_TIP","This setting only applies when ""{0}"" is set to ""{1}""."
 "MOVEMENT_SCALE","Movement Scale"
 "MOVEMENT_SCALE_TOOLTIP","Controls how much camera translation contributes to motion blur.
 Higher values result in more noticeable blur when the camera moves."
@@ -33,6 +33,8 @@ Lower values cause even subtle motion to be blurred."
 "VELOCITY_SCALE","Velocity Scale"
 "VELOCITY_SCALE_TOOLTIP","Global multiplier applied to all velocity vectors.
 Increase to exaggerate motion blur intensity."
+"VELOCITY_DOWNSAMPLE","Velocity Downsample Factor"
+"VELOCITY_DOWNSAMPLE_TOOLTIP","Set to 1 means no downsampling; higher values reduce quality of motion blur but improve performance."
 "SOFT_Z_DISTANCE","Soft Z Distance"
 "SOFT_Z_DISTANCE_TOOLTIP","Adjusts how depth differences influence blur transitions.
 Lower values create sharper separation between foreground and background; higher values blend them smoothly."
