@@ -16,7 +16,7 @@ LocalBlur: Jednoduché rozmazání podél vektorů lokální rychlosti.
 Reconstruction: Provádí věrohodné rozmazání pohybu pomocí odhadu rychlosti na základě dlaždic.
 ReconstructionDX11: Vysoce kvalitní verze optimalizovaná pro DirectX 11.
 ReconstructionDisc: Používá vzorkování kernelu tvaru disku pro výkon.","Keep the algorithm names (such as CameraMotion) unchanged. You may append the translation in parentheses after the name, e.g. 'CameraMotion (YOUR TRANSLATION)'."
-"AVAILABLE_ONLY_TIP","Toto nastavení se uplatní pouze tehdy, když je ""{0}"" nastaveno na CameraMotion.",""
+"AVAILABLE_ONLY_TIP","This setting only applies when ""{0}"" is set to ""{1}"".",""
 "MOVEMENT_SCALE","Měřítko pohybu",""
 "MOVEMENT_SCALE_TOOLTIP","Řídí, jak moc se pohyb kamery projevuje v rozmazání pohybu.
 Vyšší hodnoty způsobují znatelnější rozmazání při pohybu kamery.",""
@@ -33,6 +33,8 @@ Nižší hodnoty způsobí, že se rozmazá i jemný pohyb.",""
 "VELOCITY_SCALE","Měřítko rychlosti",""
 "VELOCITY_SCALE_TOOLTIP","Globální násobitel aplikovaný na všechny vektory rychlosti.
 Zvyšte pro zesílení intenzity rozmazání pohybu.",""
+"VELOCITY_DOWNSAMPLE","Velocity Downsample Factor",""
+"VELOCITY_DOWNSAMPLE_TOOLTIP","Set to 1 means no downsampling; higher values reduce quality of motion blur but improve performance.",""
 "SOFT_Z_DISTANCE","Měkká vzdálenost Z",""
 "SOFT_Z_DISTANCE_TOOLTIP","Upravuje, jak rozdíly v hloubce ovlivňují přechody rozmazání.
 Nižší hodnoty vytvářejí ostřejší oddělení mezi popředím a pozadím; vyšší hodnoty je plynule prolínají.",""
