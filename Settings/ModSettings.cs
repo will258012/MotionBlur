@@ -6,12 +6,11 @@ using AlgernonCommons.XML;
 using ColossalFramework.IO;
 using System.IO;
 using System.Xml.Serialization;
-using UnityStandardAssets.ImageEffects;
 
 namespace MotionBlur.Settings;
 
 [XmlRoot("MotionBlur")]
-public sealed class ModSettings : SettingsXMLBase 
+public sealed class ModSettings : SettingsXMLBase
 {
     [XmlIgnore]
     private static readonly string SettingsFileName = Path.Combine(DataLocation.localApplicationData, "MotionBlur.xml");
