@@ -16,7 +16,7 @@ LocalBlur: Eenvoudige vervaging langs lokale snelheidsvectoren.
 Reconstruction: Voert realistische bewegingsonscherpte uit met behulp van op tegels gebaseerde snelheidsschatting.
 ReconstructionDX11: Kwalitatief betere versie geoptimaliseerd voor DirectX 11.
 ReconstructionDisc: Gebruikt schijfvormige kernel sampling voor prestaties.","Keep the algorithm names (such as CameraMotion) unchanged. You may append the translation in parentheses after the name, e.g. 'CameraMotion (YOUR TRANSLATION)'."
-"AVAILABLE_ONLY_TIP","This setting only applies when ""{0}"" is set to ""{1}"".",""
+"AVAILABLE_ONLY_TIP","Deze instelling is alleen van toepassing wanneer ""{0}"" is ingesteld op ""{1}"".",""
 "MOVEMENT_SCALE","Bewegingsschaal",""
 "MOVEMENT_SCALE_TOOLTIP","Bepaalt hoeveel cameratranslatie bijdraagt aan bewegingsonscherpte.
 Hogere waarden resulteren in meer merkbare vervaging wanneer de camera beweegt.",""
@@ -33,8 +33,8 @@ Lagere waarden zorgen ervoor dat zelfs subtiele bewegingen worden vervaagd.",""
 "VELOCITY_SCALE","Snelheidsschaal",""
 "VELOCITY_SCALE_TOOLTIP","Globale vermenigvuldiger toegepast op alle snelheidsvectoren.
 Verhoog om de intensiteit van bewegingsonscherpte te versterken.",""
-"VELOCITY_DOWNSAMPLE","Velocity Downsample Factor",""
-"VELOCITY_DOWNSAMPLE_TOOLTIP","Set to 1 means no downsampling; higher values reduce quality of motion blur but improve performance.",""
+"VELOCITY_DOWNSAMPLE","Snelheid downsample factor",""
+"VELOCITY_DOWNSAMPLE_TOOLTIP","Ingesteld op 1 betekent geen downsampling; hogere waarden verminderen de kwaliteit van bewegingsonscherpte, maar verbeteren de prestaties.",""
 "SOFT_Z_DISTANCE","Zachte Z-afstand",""
 "SOFT_Z_DISTANCE_TOOLTIP","Past aan hoe diepteverschillen de vervagingsovergangen beïnvloeden.
 Lagere waarden zorgen voor een scherpere scheiding tussen voorgrond en achtergrond; hogere waarden laten ze vloeiend overvloeien.",""
