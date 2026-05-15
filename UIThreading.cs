@@ -71,7 +71,7 @@ public class UIThreading : ThreadingExtensionBase
 
         if (excludeLayers != default)
             if (!ToolsModifierControl.cameraController.GetTarget().IsEmpty)
-                Shader.SetGlobalFloat("_ClearDistance", Mathf.Clamp(ToolsModifierControl.cameraController.m_targetSize, 15f, 200f));
+                Shader.SetGlobalFloat("_ClearDistance", Mathf.Clamp(ToolsModifierControl.cameraController.m_targetSize + 10f, 15f, 200f));
             else if (FPSCamController.Instance.Status.IsFlagSet(FPSCamController.CamStatus.Enabled))
                 Shader.SetGlobalFloat("_ClearDistance", 15f);
 
