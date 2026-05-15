@@ -1,0 +1,46 @@
+﻿"LANGUAGE","Português Brasileiro","Language name (in native language).  This means the NAME OF THE LANGUAGE BEING TRANSLATED INTO, and should NOT be a translation of the word 'English'"
+"MOD_DESCRIPTION","Adicionar efeito de desfoque de movimento à câmera",""
+"ENABLE_MOTION_BLUR_IN","Ativar desfoque de movimento nos seguintes modos:",""
+"GAME","Jogo",""
+"MAP_EDITOR","Editor de Mapas","Use the official Cities: Skylines translation for this term"
+"ASSET_EDITOR","Editor de Ativos","Use the official Cities: Skylines translation for this term"
+"THEME_EDITOR","Editor de Temas","Use the official Cities: Skylines translation for this term"
+"SCENARIO_EDITOR","Editor de Cenários","Use the official Cities: Skylines translation for this term"
+"VANILLA_CAM","Modos de Câmera Vanilla (Modo de Câmera Livre & Câmera Cinematográfica)","Use the official Cities: Skylines translation for this term"
+"FPC","Qualquer modo da Câmera em Primeira Pessoa - Continuação",""
+"ACME_FPS","Modo FPS da ACME",""
+"PARAM","Parâmetros",""
+"ALGO","Algoritmo",""
+"ALGO_TOOLTIP","CameraMotion: Desfoque estilo Valve calculado a partir da rotação e movimento da câmera.
+LocalBlur: Desfoque simples ao longo de vetores de velocidade local.
+Reconstruction: Executa desfoque de movimento plausível usando estimativa de velocidade baseada em blocos.
+ReconstructionDX11: Versão de maior qualidade otimizada para DirectX 11.
+ReconstructionDisc: Usa amostragem de kernel em forma de disco para desempenho.","Keep the algorithm names (such as CameraMotion) unchanged. You may append the translation in parentheses after the name, e.g. 'CameraMotion (YOUR TRANSLATION)'."
+"AVAILABLE_ONLY_TIP","Esta configuração só se aplica quando ""{0}"" está definido como ""{1}"".",""
+"MOVEMENT_SCALE","Escala de Movimento",""
+"MOVEMENT_SCALE_TOOLTIP","Controla o quanto a translação da câmera contribui para o desfoque de movimento.
+Valores mais altos resultam em desfoque mais perceptível quando a câmera se move.",""
+"ROTATION_SCALE","Escala de Rotação",""
+"ROTATION_SCALE_TOOLTIP","Controla o quanto a rotação da câmera contribui para o desfoque de movimento.
+Valores mais altos resultam em desfoque mais forte ao girar.",""
+"MAX_VELOCITY","Velocidade Máxima",""
+"MAX_VELOCITY_TOOLTIP","Define o comprimento máximo dos rastros de desfoque de movimento.
+Valores mais baixos produzem um desfoque mais apertado; valores mais altos permitem rastros mais longos.
+Para filtros baseados em Reconstruction, este valor é limitado a 10.",""
+"MIN_VELOCITY","Velocidade Mínima",""
+"MIN_VELOCITY_TOOLTIP","Define a velocidade mínima abaixo da qual nenhum desfoque é aplicado.
+Valores mais baixos fazem com que até movimentos sutis sejam desfocados.",""
+"VELOCITY_SCALE","Escala de Velocidade",""
+"VELOCITY_SCALE_TOOLTIP","Multiplicador global aplicado a todos os vetores de velocidade.
+Aumente para exagerar a intensidade do desfoque de movimento.",""
+"VELOCITY_DOWNSAMPLE","Fator de redução de amostragem de velocidade",""
+"VELOCITY_DOWNSAMPLE_TOOLTIP","Definido como 1 significa sem redução de amostragem; valores mais altos reduzem a qualidade do desfoque de movimento, mas melhoram o desempenho.",""
+"SOFT_Z_DISTANCE","Distância Z Suave",""
+"SOFT_Z_DISTANCE_TOOLTIP","Ajusta como as diferenças de profundidade influenciam as transições de desfoque.
+Valores mais baixos criam uma separação mais nítida entre primeiro plano e fundo; valores mais altos os misturam suavemente.",""
+"JITTER","Jitter",""
+"JITTER_TOOLTIP","A quantidade de deslocamento aleatório aplicada às posições de amostragem, que ajuda a reduzir artefatos de bandas.
+Valores mais altos produzem um desfoque mais suave, mas podem introduzir ruído visível.",""
+"TOGGLE_MOTION_BLUR","Alternar Desfoque de Movimento",""
+"TOGGLE_MOTION_BLUR_TOOLTIP","Funciona em todos os modos. No entanto, ao alternar para um modo mencionado acima, o estado será substituído por suas configurações.",""
+"RESET_SETTINGS","Redefinir Configurações",""

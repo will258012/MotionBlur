@@ -1,0 +1,46 @@
+﻿"LANGUAGE","Українська","Language name (in native language).  This means the NAME OF THE LANGUAGE BEING TRANSLATED INTO, and should NOT be a translation of the word 'English'"
+"MOD_DESCRIPTION","Додати ефект розмиття руху до камери",""
+"ENABLE_MOTION_BLUR_IN","Увімкнути розмиття руху в наступних режимах:",""
+"GAME","Гра",""
+"MAP_EDITOR","Редактор мап","Use the official Cities: Skylines translation for this term"
+"ASSET_EDITOR","Редактор об'єктів","Use the official Cities: Skylines translation for this term"
+"THEME_EDITOR","Редактор тем","Use the official Cities: Skylines translation for this term"
+"SCENARIO_EDITOR","Редактор сценаріїв","Use the official Cities: Skylines translation for this term"
+"VANILLA_CAM","Стандартні режими камери (Вільна камера та Кінематографічна камера)","Use the official Cities: Skylines translation for this term"
+"FPC","Будь-який режим мода First Person Camera - Continued",""
+"ACME_FPS","Режим FPS ACME",""
+"PARAM","Параметри",""
+"ALGO","Алгоритм",""
+"ALGO_TOOLTIP","CameraMotion: Valve-стиль розмиття, обчислене за обертанням та рухом камери.
+LocalBlur: Просте розмиття вздовж локальних векторів швидкості.
+Reconstruction: Виконує правдоподібне розмиття руху з використанням оцінки швидкості на основі тайлів.
+ReconstructionDX11: Версія вищої якості, оптимізована для DirectX 11.
+ReconstructionDisc: Використовує дископодібне ядро вибірки для продуктивності.","Keep the algorithm names (such as CameraMotion) unchanged. You may append the translation in parentheses after the name, e.g. 'CameraMotion (YOUR TRANSLATION)'."
+"AVAILABLE_ONLY_TIP","Це налаштування застосовується лише тоді, коли ""{0}"" встановлено на ""{1}"".",""
+"MOVEMENT_SCALE","Масштаб руху",""
+"MOVEMENT_SCALE_TOOLTIP","Контролює, наскільки переміщення камери впливає на розмиття в русі.
+Вищі значення призводять до більш помітного розмиття під час руху камери.",""
+"ROTATION_SCALE","Масштаб обертання",""
+"ROTATION_SCALE_TOOLTIP","Контролює, наскільки обертання камери впливає на розмиття в русі.
+Вищі значення призводять до сильнішого розмиття під час повороту.",""
+"MAX_VELOCITY","Максимальна швидкість",""
+"MAX_VELOCITY_TOOLTIP","Встановлює максимальну довжину слідів розмиття в русі.
+Нижчі значення створюють більш щільне розмиття; вищі значення дозволяють довші смуги.
+Для фільтрів на основі Reconstruction це значення обмежено 10.",""
+"MIN_VELOCITY","Мінімальна швидкість",""
+"MIN_VELOCITY_TOOLTIP","Встановлює мінімальну швидкість, нижче якої розмиття не застосовується.
+Нижчі значення спричиняють розмиття навіть незначного руху.",""
+"VELOCITY_SCALE","Масштаб швидкості",""
+"VELOCITY_SCALE_TOOLTIP","Глобальний множник, що застосовується до всіх векторів швидкості.
+Збільште, щоб посилити інтенсивність розмиття руху.",""
+"VELOCITY_DOWNSAMPLE","Коефіцієнт зниження дискретизації швидкості",""
+"VELOCITY_DOWNSAMPLE_TOOLTIP","Встановлення значення 1 означає відсутність зниження дискретизації; вищі значення знижують якість розмиття руху, але покращують продуктивність.",""
+"SOFT_Z_DISTANCE","М'яка Z-відстань",""
+"SOFT_Z_DISTANCE_TOOLTIP","Регулює вплив різниці глибини на переходи розмиття.
+Нижчі значення створюють чіткіше розділення між переднім та заднім планом; вищі значення змішують їх плавно.",""
+"JITTER","Тремтіння",""
+"JITTER_TOOLTIP","Величина випадкового зсуву, який застосовується до позицій семплювання, що допомагає зменшити артефакти смугастості.
+Вищі значення дають м'якіше розмиття, але можуть вносити видимий шум.",""
+"TOGGLE_MOTION_BLUR","Перемкнути розмиття руху",""
+"TOGGLE_MOTION_BLUR_TOOLTIP","Працює в усіх режимах. Однак, при перемиканні на вищезгаданий режим, стан буде перевизначено його налаштуваннями.",""
+"RESET_SETTINGS","Скинути налаштування",""

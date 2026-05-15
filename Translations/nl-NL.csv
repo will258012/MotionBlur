@@ -1,0 +1,46 @@
+﻿"LANGUAGE","Nederlands","Language name (in native language).  This means the NAME OF THE LANGUAGE BEING TRANSLATED INTO, and should NOT be a translation of the word 'English'"
+"MOD_DESCRIPTION","Voeg bewegingsonscherpte-effect toe aan de camera",""
+"ENABLE_MOTION_BLUR_IN","Schakel bewegingsonscherpte in voor de volgende modi:",""
+"GAME","Spel",""
+"MAP_EDITOR","Kaarteditor","Use the official Cities: Skylines translation for this term"
+"ASSET_EDITOR","Activa-editor","Use the official Cities: Skylines translation for this term"
+"THEME_EDITOR","Thema-editor","Use the official Cities: Skylines translation for this term"
+"SCENARIO_EDITOR","Scenario-editor","Use the official Cities: Skylines translation for this term"
+"VANILLA_CAM","Vanilla-cameramodi (Vrije cameramodus & Filmcamera)","Use the official Cities: Skylines translation for this term"
+"FPC","Elke modus van First Person Camera - Continued",""
+"ACME_FPS","FPS-modus van ACME",""
+"PARAM","Parameters",""
+"ALGO","Algoritme",""
+"ALGO_TOOLTIP","CameraMotion: Valve-stijl vervaging berekend op basis van camerarotatie en -beweging.
+LocalBlur: Eenvoudige vervaging langs lokale snelheidsvectoren.
+Reconstruction: Voert realistische bewegingsonscherpte uit met behulp van op tegels gebaseerde snelheidsschatting.
+ReconstructionDX11: Kwalitatief betere versie geoptimaliseerd voor DirectX 11.
+ReconstructionDisc: Gebruikt schijfvormige kernel sampling voor prestaties.","Keep the algorithm names (such as CameraMotion) unchanged. You may append the translation in parentheses after the name, e.g. 'CameraMotion (YOUR TRANSLATION)'."
+"AVAILABLE_ONLY_TIP","Deze instelling is alleen van toepassing wanneer ""{0}"" is ingesteld op ""{1}"".",""
+"MOVEMENT_SCALE","Bewegingsschaal",""
+"MOVEMENT_SCALE_TOOLTIP","Bepaalt hoeveel cameratranslatie bijdraagt aan bewegingsonscherpte.
+Hogere waarden resulteren in meer merkbare vervaging wanneer de camera beweegt.",""
+"ROTATION_SCALE","Rotatieschaal",""
+"ROTATION_SCALE_TOOLTIP","Bepaalt hoeveel camerarotatie bijdraagt aan bewegingsonscherpte.
+Hogere waarden resulteren in een sterkere vervaging bij het draaien.",""
+"MAX_VELOCITY","Maximale snelheid",""
+"MAX_VELOCITY_TOOLTIP","Stelt de maximale lengte van bewegingsonscherptesporen in.
+Lagere waarden geven een strakkere vervaging; hogere waarden zorgen voor langere strepen.
+Voor op Reconstructie gebaseerde filters is deze waarde beperkt tot 10.",""
+"MIN_VELOCITY","Minimale snelheid",""
+"MIN_VELOCITY_TOOLTIP","Stelt de minimale snelheid in waaronder geen vervaging wordt toegepast.
+Lagere waarden zorgen ervoor dat zelfs subtiele bewegingen worden vervaagd.",""
+"VELOCITY_SCALE","Snelheidsschaal",""
+"VELOCITY_SCALE_TOOLTIP","Globale vermenigvuldiger toegepast op alle snelheidsvectoren.
+Verhoog om de intensiteit van bewegingsonscherpte te versterken.",""
+"VELOCITY_DOWNSAMPLE","Snelheid downsample factor",""
+"VELOCITY_DOWNSAMPLE_TOOLTIP","Ingesteld op 1 betekent geen downsampling; hogere waarden verminderen de kwaliteit van bewegingsonscherpte, maar verbeteren de prestaties.",""
+"SOFT_Z_DISTANCE","Zachte Z-afstand",""
+"SOFT_Z_DISTANCE_TOOLTIP","Past aan hoe diepteverschillen de vervagingsovergangen beïnvloeden.
+Lagere waarden zorgen voor een scherpere scheiding tussen voorgrond en achtergrond; hogere waarden laten ze vloeiend overvloeien.",""
+"JITTER","Jitter",""
+"JITTER_TOOLTIP","De hoeveelheid willekeurige offset die wordt toegepast op sampleposities, wat helpt om banding-artefacten te verminderen.
+Hogere waarden produceren zachtere vervaging, maar kunnen zichtbare ruis introduceren.",""
+"TOGGLE_MOTION_BLUR","Schakel bewegingsvervaging",""
+"TOGGLE_MOTION_BLUR_TOOLTIP","Werkt in alle modi. Wanneer u echter overschakelt naar een hierboven genoemde modus, wordt de status overschreven door de instellingen ervan.",""
+"RESET_SETTINGS","Instellingen resetten",""

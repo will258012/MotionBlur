@@ -1,0 +1,46 @@
+﻿"LANGUAGE","Magyar","Language name (in native language).  This means the NAME OF THE LANGUAGE BEING TRANSLATED INTO, and should NOT be a translation of the word 'English'"
+"MOD_DESCRIPTION","Mozgás elmosódás effektus hozzáadása a kamerához",""
+"ENABLE_MOTION_BLUR_IN","Mozgás elmosódás engedélyezése a következő módokban:",""
+"GAME","Játék",""
+"MAP_EDITOR","Térképszerkesztő","Use the official Cities: Skylines translation for this term"
+"ASSET_EDITOR","Eszközszerkesztő","Use the official Cities: Skylines translation for this term"
+"THEME_EDITOR","Témaszerkesztő","Use the official Cities: Skylines translation for this term"
+"SCENARIO_EDITOR","Forgatókönyv-szerkesztő","Use the official Cities: Skylines translation for this term"
+"VANILLA_CAM","Vanilla kamera módok (Szabad kamera mód és Filmes kamera)","Use the official Cities: Skylines translation for this term"
+"FPC","Az Első személyű kamera - Folytatás bármely módja",""
+"ACME_FPS","ACME FPS módja",""
+"PARAM","Paraméterek",""
+"ALGO","Algoritmus",""
+"ALGO_TOOLTIP","CameraMotion: Valve-stílusú elmosódás, amely a kamera elforgatásából és mozgásából számítódik.
+LocalBlur: Egyszerű elmosódás a helyi sebességvektorok mentén.
+Reconstruction: Hihető mozgás elmosódás végrehajtása csempék alapú sebességbecsléssel.
+ReconstructionDX11: Magasabb minőségű változat, DirectX 11-re optimalizálva.
+ReconstructionDisc: Korong alakú kernel mintavételt használ a teljesítmény érdekében.","Keep the algorithm names (such as CameraMotion) unchanged. You may append the translation in parentheses after the name, e.g. 'CameraMotion (YOUR TRANSLATION)'."
+"AVAILABLE_ONLY_TIP","Ez a beállítás csak akkor érvényes, ha a(z) ""{0}"" értéke ""{1}"".",""
+"MOVEMENT_SCALE","Mozgási skála",""
+"MOVEMENT_SCALE_TOOLTIP","Szabályozza, hogy a kamera elmozdulása mennyiben járul hozzá a mozgás elmosódásához.
+A magasabb értékek észrevehetőbb elmosódást eredményeznek, amikor a kamera mozog.",""
+"ROTATION_SCALE","Forgatási skála",""
+"ROTATION_SCALE_TOOLTIP","Szabályozza, hogy a kamera elforgatása mennyiben járul hozzá a mozgás elmosódásához.
+A magasabb értékek erősebb elmosódást eredményeznek kanyarodáskor.",""
+"MAX_VELOCITY","Maximális sebesség",""
+"MAX_VELOCITY_TOOLTIP","Beállítja a mozgás elmosódás nyomainak maximális hosszát.
+Az alacsonyabb értékek szorosabb elmosódást eredményeznek; a magasabb értékek hosszabb csíkokat tesznek lehetővé.
+A Reconstruction-alapú szűrők esetében ez az érték maximum 10 lehet.",""
+"MIN_VELOCITY","Minimális sebesség",""
+"MIN_VELOCITY_TOOLTIP","Beállítja a minimális sebességet, amely alatt nem történik elmosás.
+Alacsonyabb értékek esetén még a finom mozgás is elmosódik.",""
+"VELOCITY_SCALE","Sebesség skála",""
+"VELOCITY_SCALE_TOOLTIP","Az összes sebességvektorra alkalmazott globális szorzó.
+Növelje a mozgás-elmosódás intenzitásának fokozásához.",""
+"VELOCITY_DOWNSAMPLE","Sebesség alulmintavételezési tényező",""
+"VELOCITY_DOWNSAMPLE_TOOLTIP","Ha 1-re van állítva, nincs alulmintavételezés; a magasabb értékek csökkentik a mozgásélesség minőségét, de javítják a teljesítményt.",""
+"SOFT_Z_DISTANCE","Lágy Z-távolság",""
+"SOFT_Z_DISTANCE_TOOLTIP","Beállítja, hogy a mélységkülönbségek hogyan befolyásolják az elmosódás átmeneteit.
+Alacsonyabb értékek élesebb elválasztást hoznak létre az előtér és a háttér között; magasabb értékek simán keverik azokat.",""
+"JITTER","Remegés",""
+"JITTER_TOOLTIP","A mintavételi pozíciókra alkalmazott véletlenszerű eltolás mértéke, amely segít csökkenteni a csíkozási műtermékeket.
+Magasabb értékek lágyabb elmosódást eredményeznek, de látható zajt okozhatnak.",""
+"TOGGLE_MOTION_BLUR","Mozgáselmosódás be/ki",""
+"TOGGLE_MOTION_BLUR_TOOLTIP","Minden módban működik. Azonban a fent említett módra váltáskor az állapotot felülírják a beállításai.",""
+"RESET_SETTINGS","Beállítások visszaállítása",""

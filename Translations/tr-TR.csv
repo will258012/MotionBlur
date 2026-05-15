@@ -1,0 +1,46 @@
+﻿"LANGUAGE","Türkçe","Language name (in native language).  This means the NAME OF THE LANGUAGE BEING TRANSLATED INTO, and should NOT be a translation of the word 'English'"
+"MOD_DESCRIPTION","Kameraya hareket bulanıklığı efekti ekle",""
+"ENABLE_MOTION_BLUR_IN","Hareket bulanıklığını aşağıdaki modlarda etkinleştir:",""
+"GAME","Oyun",""
+"MAP_EDITOR","Harita Düzenleyicisi","Use the official Cities: Skylines translation for this term"
+"ASSET_EDITOR","Varlık Düzenleyicisi","Use the official Cities: Skylines translation for this term"
+"THEME_EDITOR","Tema Düzenleyicisi","Use the official Cities: Skylines translation for this term"
+"SCENARIO_EDITOR","Senaryo Düzenleyicisi","Use the official Cities: Skylines translation for this term"
+"VANILLA_CAM","Vanilla Kamera Modları (Serbest Kamera Modu ve Sinematik Kamera)","Use the official Cities: Skylines translation for this term"
+"FPC","First Person Camera - Continued'ın herhangi bir modu",""
+"ACME_FPS","ACME'nin FPS Modu",""
+"PARAM","Parametreler",""
+"ALGO","Algoritma",""
+"ALGO_TOOLTIP","CameraMotion: Valve tarzı bulanıklık, kamera dönüşü ve hareketinden hesaplanır.
+LocalBlur: Yerel hız vektörleri boyunca basit bulanıklık.
+Reconstruction: Döşeme tabanlı hız tahmini kullanarak gerçekçi hareket bulanıklığı gerçekleştirir.
+ReconstructionDX11: DirectX 11 için optimize edilmiş yüksek kaliteli sürüm.
+ReconstructionDisc: Performans için disk şeklinde çekirdek örnekleme kullanır.","Keep the algorithm names (such as CameraMotion) unchanged. You may append the translation in parentheses after the name, e.g. 'CameraMotion (YOUR TRANSLATION)'."
+"AVAILABLE_ONLY_TIP","Bu ayar yalnızca ""{0}"" ""{1}"" olarak ayarlandığında geçerlidir.",""
+"MOVEMENT_SCALE","Hareket Ölçeği",""
+"MOVEMENT_SCALE_TOOLTIP","Kamera hareketinin hareket bulanıklığına ne kadar katkıda bulunduğunu kontrol eder.
+Daha yüksek değerler, kamera hareket ettiğinde daha belirgin bulanıklığa neden olur.",""
+"ROTATION_SCALE","Dönüş Ölçeği",""
+"ROTATION_SCALE_TOOLTIP","Kamera dönüşünün hareket bulanıklığına ne kadar katkıda bulunduğunu kontrol eder.
+Daha yüksek değerler, dönerken daha güçlü bulanıklığa neden olur.",""
+"MAX_VELOCITY","Maksimum Hız",""
+"MAX_VELOCITY_TOOLTIP","Hareket bulanıklığı izlerinin maksimum uzunluğunu ayarlar.
+Düşük değerler daha sıkı bir bulanıklık üretir; yüksek değerler daha uzun çizgilere izin verir.
+Yeniden yapılandırma tabanlı filtreler için bu değer 10 ile sınırlandırılmıştır.",""
+"MIN_VELOCITY","Minimum Hız",""
+"MIN_VELOCITY_TOOLTIP","Bulama uygulanmayan minimum hızı ayarlar.
+Düşük değerler, hafif hareketlerin bile bulanıklaşmasına neden olur.",""
+"VELOCITY_SCALE","Hız Ölçeği",""
+"VELOCITY_SCALE_TOOLTIP","Tüm hız vektörlerine uygulanan genel çarpan.
+Arttırmak, hareket bulanıklığı yoğunluğunu abartır.",""
+"VELOCITY_DOWNSAMPLE","Hız Altörnekleme Faktörü",""
+"VELOCITY_DOWNSAMPLE_TOOLTIP","1 olarak ayarlanması altörnekleme yapılmadığı anlamına gelir; daha yüksek değerler hareket bulanıklığı kalitesini düşürür ancak performansı artırır.",""
+"SOFT_Z_DISTANCE","Yumuşak Z Mesafesi",""
+"SOFT_Z_DISTANCE_TOOLTIP","Derinlik farklarının bulanık geçişlerini nasıl etkilediğini ayarlar.
+Düşük değerler ön plan ve arka plan arasında daha keskin ayrım yaratır; yüksek değerler bunları yumuşak bir şekilde birleştirir.",""
+"JITTER","Titreşim",""
+"JITTER_TOOLTIP","Örnekleme konumlarına uygulanan rastgele kaydırma miktarı, bantlama artefaktlarını azaltmaya yardımcı olur.
+Daha yüksek değerler daha yumuşak bulanıklık oluşturur ancak görünür gürültüye neden olabilir.",""
+"TOGGLE_MOTION_BLUR","Hareket Bulanıklığını Aç/Kapat",""
+"TOGGLE_MOTION_BLUR_TOOLTIP","Tüm modlarda çalışır. Ancak yukarıda belirtilen bir moda geçildiğinde durum, o modun ayarları tarafından geçersiz kılınır.",""
+"RESET_SETTINGS","Ayarları Sıfırla",""

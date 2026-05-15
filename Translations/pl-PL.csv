@@ -1,0 +1,46 @@
+﻿"LANGUAGE","Polski","Language name (in native language).  This means the NAME OF THE LANGUAGE BEING TRANSLATED INTO, and should NOT be a translation of the word 'English'"
+"MOD_DESCRIPTION","Dodaj efekt rozmycia ruchu do kamery",""
+"ENABLE_MOTION_BLUR_IN","Włącz rozmycie ruchu w następujących trybach:",""
+"GAME","Gra",""
+"MAP_EDITOR","Edytor map","Use the official Cities: Skylines translation for this term"
+"ASSET_EDITOR","Edytor zasobów","Use the official Cities: Skylines translation for this term"
+"THEME_EDITOR","Edytor motywów","Use the official Cities: Skylines translation for this term"
+"SCENARIO_EDITOR","Edytor scenariuszy","Use the official Cities: Skylines translation for this term"
+"VANILLA_CAM","Oryginalne tryby kamery (Tryb swobodnej kamery i Kamera kinowa)","Use the official Cities: Skylines translation for this term"
+"FPC","Dowolny tryb First Person Camera - Continued",""
+"ACME_FPS","Tryb FPS ACME",""
+"PARAM","Parametry",""
+"ALGO","Algorytm",""
+"ALGO_TOOLTIP","CameraMotion: Rozmycie w stylu Valve obliczane na podstawie obrotu i ruchu kamery.
+LocalBlur: Proste rozmycie wzdłuż lokalnych wektorów prędkości.
+Reconstruction: Wykonuje wiarygodne rozmycie ruchu przy użyciu estymacji prędkości opartej na kafelkach.
+ReconstructionDX11: Wersja wyższej jakości zoptymalizowana dla DirectX 11.
+ReconstructionDisc: Używa próbkowania jądra w kształcie dysku dla wydajności.","Keep the algorithm names (such as CameraMotion) unchanged. You may append the translation in parentheses after the name, e.g. 'CameraMotion (YOUR TRANSLATION)'."
+"AVAILABLE_ONLY_TIP","To ustawienie ma zastosowanie tylko wtedy, gdy ""{0}"" jest ustawione na ""{1}"".",""
+"MOVEMENT_SCALE","Skala ruchu",""
+"MOVEMENT_SCALE_TOOLTIP","Kontroluje, jak bardzo przesunięcie kamery wpływa na rozmycie ruchu.
+Wyższe wartości powodują bardziej zauważalne rozmycie podczas ruchu kamery.",""
+"ROTATION_SCALE","Skala obrotu",""
+"ROTATION_SCALE_TOOLTIP","Kontroluje, jak bardzo obrót kamery wpływa na rozmycie ruchu.
+Wyższe wartości powodują silniejsze rozmycie podczas obracania.",""
+"MAX_VELOCITY","Prędkość maksymalna",""
+"MAX_VELOCITY_TOOLTIP","Ustawia maksymalną długość smug rozmycia ruchu.
+Niższe wartości dają ciaśniejsze rozmycie; wyższe wartości pozwalają na dłuższe smugi.
+W przypadku filtrów opartych na rekonstrukcji wartość ta jest ograniczona do 10.",""
+"MIN_VELOCITY","Prędkość minimalna",""
+"MIN_VELOCITY_TOOLTIP","Ustawia minimalną prędkość, poniżej której nie stosuje się rozmycia.
+Niższe wartości powodują rozmycie nawet subtelnego ruchu.",""
+"VELOCITY_SCALE","Skala prędkości",""
+"VELOCITY_SCALE_TOOLTIP","Globalny mnożnik stosowany do wszystkich wektorów prędkości.
+Zwiększ, aby wzmocnić intensywność rozmycia ruchu.",""
+"VELOCITY_DOWNSAMPLE","Współczynnik zmniejszania próbkowania prędkości",""
+"VELOCITY_DOWNSAMPLE_TOOLTIP","Ustawienie na 1 oznacza brak zmniejszania próbkowania; wyższe wartości obniżają jakość rozmycia ruchu, ale poprawiają wydajność.",""
+"SOFT_Z_DISTANCE","Miękka odległość Z",""
+"SOFT_Z_DISTANCE_TOOLTIP","Dostosowuje wpływ różnic głębi na przejścia rozmycia.
+Niższe wartości tworzą ostrzejsze rozdzielenie pierwszego planu i tła; wyższe wartości płynnie je mieszają.",""
+"JITTER","Drganie",""
+"JITTER_TOOLTIP","Ilość losowego przesunięcia zastosowanego do pozycji próbkowania, co pomaga zmniejszyć artefakty pasmowania.
+Wyższe wartości powodują bardziej miękki rozmycie, ale mogą wprowadzać widoczny szum.",""
+"TOGGLE_MOTION_BLUR","Przełącz rozmycie ruchu",""
+"TOGGLE_MOTION_BLUR_TOOLTIP","Działa we wszystkich trybach. Jednak podczas przełączania na tryb wymieniony powyżej, stan zostanie nadpisany przez jego ustawienia.",""
+"RESET_SETTINGS","Zresetuj ustawienia",""

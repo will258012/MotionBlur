@@ -1,0 +1,46 @@
+﻿"LANGUAGE","Suomi","Language name (in native language).  This means the NAME OF THE LANGUAGE BEING TRANSLATED INTO, and should NOT be a translation of the word 'English'"
+"MOD_DESCRIPTION","Lisää liikkeen sumennusefekti kameraan",""
+"ENABLE_MOTION_BLUR_IN","Ota käyttöön liikkeen sumennus seuraavissa tiloissa:",""
+"GAME","Peli",""
+"MAP_EDITOR","Karttaeditori","Use the official Cities: Skylines translation for this term"
+"ASSET_EDITOR","Omaisuuseditori","Use the official Cities: Skylines translation for this term"
+"THEME_EDITOR","Teemaeditori","Use the official Cities: Skylines translation for this term"
+"SCENARIO_EDITOR","Skenaarioeditori","Use the official Cities: Skylines translation for this term"
+"VANILLA_CAM","Peruskameratilat (Vapaa kameratila ja Elokuvakamera)","Use the official Cities: Skylines translation for this term"
+"FPC","Mikä tahansa First Person Camera - Continued -tiloista",""
+"ACME_FPS","ACME:n FPS-tila",""
+"PARAM","Parametrit",""
+"ALGO","Algoritmi",""
+"ALGO_TOOLTIP","CameraMotion: Valve-tyylinen sumennus, laskettu kameran pyörimisestä ja liikkeestä.
+LocalBlur: Yksinkertainen sumennus paikallisten nopeusvektorien suunnassa.
+Reconstruction: Suorittaa uskottavaa liikesumennusta käyttäen ruutuihin perustuvaa nopeuden estimointia.
+ReconstructionDX11: Korkealaatuisempi versio, optimoitu DirectX 11:lle.
+ReconstructionDisc: Käyttää kiekonmuotoista ydinotantaa suorituskyvyn parantamiseksi.","Keep the algorithm names (such as CameraMotion) unchanged. You may append the translation in parentheses after the name, e.g. 'CameraMotion (YOUR TRANSLATION)'."
+"AVAILABLE_ONLY_TIP","Tämä asetus koskee vain, kun ""{0}"" on asetettu arvoon ""{1}"".",""
+"MOVEMENT_SCALE","Liikkeen skaala",""
+"MOVEMENT_SCALE_TOOLTIP","Ohjaa kuinka paljon kameran siirtyminen vaikuttaa liikkeen sumennukseen.
+Suuremmat arvot aiheuttavat huomattavampaa sumennusta kameran liikkuessa.",""
+"ROTATION_SCALE","Kierron asteikko",""
+"ROTATION_SCALE_TOOLTIP","Ohjaa kuinka paljon kameran pyöriminen vaikuttaa liikkeen sumennukseen.
+Suuremmat arvot aiheuttavat voimakkaampaa sumennusta käännettäessä.",""
+"MAX_VELOCITY","Suurin nopeus",""
+"MAX_VELOCITY_TOOLTIP","Asettaa liikkeen sumennusjälkien maksimipituuden.
+Pienemmät arvot tuottavat tiukempaa sumennusta; suuremmat arvot mahdollistavat pidemmät vanat.
+Rekonstruktiopohjaisissa suodattimissa tämä arvo on rajoitettu 10:een.",""
+"MIN_VELOCITY","Pienin nopeus",""
+"MIN_VELOCITY_TOOLTIP","Asettaa vähimmäisnopeuden, jonka alapuolella sumennusta ei sovelleta.
+Pienemmät arvot aiheuttavat jopa hienovaraisen liikkeen sumennuksen.",""
+"VELOCITY_SCALE","Nopeuden skaala",""
+"VELOCITY_SCALE_TOOLTIP","Kaikkiin nopeusvektoreihin sovellettava globaali kertoja.
+Lisää liikkeen sumennuksen voimakkuuden liioittelemiseksi.",""
+"VELOCITY_DOWNSAMPLE","Nopeuden alinäytteenottokerroin",""
+"VELOCITY_DOWNSAMPLE_TOOLTIP","Arvo 1 tarkoittaa, ettei alinäytteenottoa tapahdu; korkeammat arvot heikentävät liikesumennuksen laatua mutta parantavat suorituskykyä.",""
+"SOFT_Z_DISTANCE","Pehmeä Z-etäisyys",""
+"SOFT_Z_DISTANCE_TOOLTIP","Säätää kuinka syvyyserot vaikuttavat sumennussiirtymiin.
+Pienemmät arvot luovat terävämmän eron etualan ja taustan välillä; suuremmat arvot sekoittavat ne tasaisesti.",""
+"JITTER","Tärinä",""
+"JITTER_TOOLTIP","Satunnaisen siirtymän määrä, jota sovelletaan näytteenottopaikkoihin, mikä auttaa vähentämään juovien artefakteja.
+Suuremmat arvot tuottavat pehmeämpää sumennusta, mutta voivat aiheuttaa näkyvää kohinaa.",""
+"TOGGLE_MOTION_BLUR","Kytke liikesumeus",""
+"TOGGLE_MOTION_BLUR_TOOLTIP","Toimii kaikissa tiloissa. Kun kuitenkin vaihdat johonkin yllä mainittuun tilaan, tila korvataan sen asetuksilla.",""
+"RESET_SETTINGS","Nollaa asetukset",""

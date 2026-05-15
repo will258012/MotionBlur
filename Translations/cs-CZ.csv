@@ -1,0 +1,46 @@
+﻿"LANGUAGE","Čeština","Language name (in native language).  This means the NAME OF THE LANGUAGE BEING TRANSLATED INTO, and should NOT be a translation of the word 'English'"
+"MOD_DESCRIPTION","Přidat efekt rozmazání pohybu kameře",""
+"ENABLE_MOTION_BLUR_IN","Povolit rozmazání pohybu v následujících režimech:",""
+"GAME","Hra",""
+"MAP_EDITOR","Editor map","Use the official Cities: Skylines translation for this term"
+"ASSET_EDITOR","Editor assetů","Use the official Cities: Skylines translation for this term"
+"THEME_EDITOR","Editor témat","Use the official Cities: Skylines translation for this term"
+"SCENARIO_EDITOR","Editor scénářů","Use the official Cities: Skylines translation for this term"
+"VANILLA_CAM","Vanilla režimy kamery (volný režim a filmová kamera)","Use the official Cities: Skylines translation for this term"
+"FPC","Libovolný režim First Person Camera - Continued",""
+"ACME_FPS","FPS režim ACME",""
+"PARAM","Parametry",""
+"ALGO","Algoritmus",""
+"ALGO_TOOLTIP","CameraMotion: Rozmazání ve stylu Valve vypočítané z rotace a pohybu kamery.
+LocalBlur: Jednoduché rozmazání podél vektorů lokální rychlosti.
+Reconstruction: Provádí věrohodné rozmazání pohybu pomocí odhadu rychlosti na základě dlaždic.
+ReconstructionDX11: Vysoce kvalitní verze optimalizovaná pro DirectX 11.
+ReconstructionDisc: Používá vzorkování kernelu tvaru disku pro výkon.","Keep the algorithm names (such as CameraMotion) unchanged. You may append the translation in parentheses after the name, e.g. 'CameraMotion (YOUR TRANSLATION)'."
+"AVAILABLE_ONLY_TIP","Toto nastavení platí pouze tehdy, když je ""{0}"" nastaveno na ""{1}"".",""
+"MOVEMENT_SCALE","Měřítko pohybu",""
+"MOVEMENT_SCALE_TOOLTIP","Řídí, jak moc se pohyb kamery projevuje v rozmazání pohybu.
+Vyšší hodnoty způsobují znatelnější rozmazání při pohybu kamery.",""
+"ROTATION_SCALE","Měřítko rotace",""
+"ROTATION_SCALE_TOOLTIP","Řídí, jak moc se rotace kamery projevuje v rozmazání pohybu.
+Vyšší hodnoty způsobují silnější rozmazání při otáčení.",""
+"MAX_VELOCITY","Maximální rychlost",""
+"MAX_VELOCITY_TOOLTIP","Nastavuje maximální délku stop rozmazání pohybu.
+Nižší hodnoty vytvářejí užší rozmazání; vyšší hodnoty umožňují delší stopy.
+U filtrů založených na rekonstrukci je tato hodnota omezena na 10.",""
+"MIN_VELOCITY","Minimální rychlost",""
+"MIN_VELOCITY_TOOLTIP","Nastaví minimální rychlost, pod kterou se nepoužije rozmazání.
+Nižší hodnoty způsobí, že se rozmazá i jemný pohyb.",""
+"VELOCITY_SCALE","Měřítko rychlosti",""
+"VELOCITY_SCALE_TOOLTIP","Globální násobitel aplikovaný na všechny vektory rychlosti.
+Zvyšte pro zesílení intenzity rozmazání pohybu.",""
+"VELOCITY_DOWNSAMPLE","Faktor podvzorkování rychlosti",""
+"VELOCITY_DOWNSAMPLE_TOOLTIP","Nastavení na 1 znamená žádné podvzorkování; vyšší hodnoty snižují kvalitu rozmazání pohybu, ale zlepšují výkon.",""
+"SOFT_Z_DISTANCE","Měkká vzdálenost Z",""
+"SOFT_Z_DISTANCE_TOOLTIP","Upravuje, jak rozdíly v hloubce ovlivňují přechody rozmazání.
+Nižší hodnoty vytvářejí ostřejší oddělení mezi popředím a pozadím; vyšší hodnoty je plynule prolínají.",""
+"JITTER","Chvění",""
+"JITTER_TOOLTIP","Míra náhodného posunu aplikovaného na vzorkovací pozice, což pomáhá snížit pruhové artefakty.
+Vyšší hodnoty vytvářejí měkčí rozostření, ale mohou zavést viditelný šum.",""
+"TOGGLE_MOTION_BLUR","Přepnout pohybové rozostření",""
+"TOGGLE_MOTION_BLUR_TOOLTIP","Funguje ve všech režimech. Při přepnutí do výše uvedeného režimu však bude stav přepsán jeho nastavením.",""
+"RESET_SETTINGS","Obnovit nastavení",""
