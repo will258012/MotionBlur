@@ -5,7 +5,6 @@ using AlgernonCommons.UI;
 using ColossalFramework.UI;
 using System;
 using UnityEngine;
-using UnityStandardAssets.ImageEffects;
 
 namespace MotionBlur.Settings;
 
@@ -16,9 +15,6 @@ public class OptionsPanel : OptionsPanelBase
     private const float TitleMargin = 50f;
     private const float SliderMargin = 60f;
 
-    private UIDropDown language_DropDown;
-    private UICheckBox logging_CheckBox;
-    private UIButton defaults_Button;
     private UIScrollablePanel scrollPanel;
     protected override void Setup()
     {
@@ -45,13 +41,13 @@ public class OptionsPanel : OptionsPanelBase
 
         UIScrollbars.AddScrollbar(this, scrollPanel);
 
-        language_DropDown = UIDropDowns.AddPlainDropDown(
-            scrollPanel,
-            LeftMargin,
-            currentY,
-            Translations.Translate("LANGUAGE_CHOICE"),
-            Translations.LanguageList,
-            Translations.Index);
+        var language_DropDown = UIDropDowns.AddPlainDropDown(
+             scrollPanel,
+             LeftMargin,
+             currentY,
+             Translations.Translate("LANGUAGE_CHOICE"),
+             Translations.LanguageList,
+             Translations.Index);
 
         language_DropDown.eventSelectedIndexChanged += (_, index) =>
         {
@@ -63,11 +59,11 @@ public class OptionsPanel : OptionsPanelBase
         currentY += language_DropDown.parent.height + Margin;
 
 
-        logging_CheckBox = UICheckBoxes.AddPlainCheckBox(
-            scrollPanel,
-            LeftMargin,
-            currentY,
-            Translations.Translate("DETAIL_LOGGING"));
+        var logging_CheckBox = UICheckBoxes.AddPlainCheckBox(
+             scrollPanel,
+             LeftMargin,
+             currentY,
+             Translations.Translate("DETAIL_LOGGING"));
 
         logging_CheckBox.isChecked = Logging.DetailLogging;
         logging_CheckBox.eventCheckChanged += (_, value) =>
@@ -149,7 +145,7 @@ public class OptionsPanel : OptionsPanelBase
 
         if (ModSettings.FilterType == CameraMotionBlur.MotionBlurFilter.CameraMotion)
         {
-            var label1 = UILabels.AddLabel(scrollPanel, LeftMargin, currentY, string.Format(Translations.Translate("AVAILABLE_ONLY_TIP"), Translations.Translate("ALGO")));
+            var label1 = UILabels.AddLabel(scrollPanel, LeftMargin, currentY, string.Format(Translations.Translate("AVAILABLE_ONLY_TIP"), Translations.Translate("ALGO"), CameraMotionBlur.MotionBlurFilter.CameraMotion.ToString()), headerWidth);
             currentY += label1.height + Margin;
             CreateSlider(
                 Translations.Translate("MOVEMENT_SCALE"),
@@ -159,7 +155,7 @@ public class OptionsPanel : OptionsPanelBase
                 value => ModSettings.MovementScale = value,
                 Translations.Translate("MOVEMENT_SCALE_TOOLTIP"));
 
-            var label2 = UILabels.AddLabel(scrollPanel, LeftMargin, currentY, string.Format(Translations.Translate("AVAILABLE_ONLY_TIP"), Translations.Translate("ALGO")));
+            var label2 = UILabels.AddLabel(scrollPanel, LeftMargin, currentY, string.Format(Translations.Translate("AVAILABLE_ONLY_TIP"), Translations.Translate("ALGO"), CameraMotionBlur.MotionBlurFilter.CameraMotion.ToString()), headerWidth);
             currentY += label2.height + Margin;
             CreateSlider(
                 Translations.Translate("ROTATION_SCALE"),
@@ -169,7 +165,21 @@ public class OptionsPanel : OptionsPanelBase
                 value => ModSettings.RotationScale = value,
                 Translations.Translate("ROTATION_SCALE_TOOLTIP"));
         }
+        if (ModSettings.FilterType is CameraMotionBlur.MotionBlurFilter.Reconstruction
+            or CameraMotionBlur.MotionBlurFilter.ReconstructionDX11
+            or CameraMotionBlur.MotionBlurFilter.ReconstructionDisc)
+        {
+            var label3 = UILabels.AddLabel(scrollPanel, LeftMargin, currentY, string.Format(Translations.Translate("AVAILABLE_ONLY_TIP"), Translations.Translate("ALGO"), $"{CameraMotionBlur.MotionBlurFilter.Reconstruction}, {CameraMotionBlur.MotionBlurFilter.ReconstructionDX11}, {CameraMotionBlur.MotionBlurFilter.ReconstructionDisc}"), headerWidth);
+            currentY += label3.height + Margin;
 
+            CreateSlider(
+                Translations.Translate("SOFT_Z_DISTANCE"),
+                ref currentY,
+                .001f, .1f, .001f,
+                ModSettings.SoftZDistance,
+                value => ModSettings.SoftZDistance = value,
+                Translations.Translate("SOFT_Z_DISTANCE_TOOLTIP"));
+        }
         CreateSlider(
             Translations.Translate("MAX_VELOCITY"),
             ref currentY,
@@ -196,13 +206,20 @@ public class OptionsPanel : OptionsPanelBase
             value => ModSettings.VelocityScale = value,
             Translations.Translate("VELOCITY_SCALE_TOOLTIP"));
 
-        CreateSlider(
-            Translations.Translate("SOFT_Z_DISTANCE"),
-            ref currentY,
-            .001f, .1f, .001f,
-            ModSettings.SoftZDistance,
-            value => ModSettings.SoftZDistance = value,
-            Translations.Translate("SOFT_Z_DISTANCE_TOOLTIP"));
+        var downSample = UISliders.AddPlainSliderWithIntegerValue(
+            scrollPanel,
+            LeftMargin,
+            currentY,
+            Translations.Translate("VELOCITY_DOWNSAMPLE"),
+            1f,
+            4f,
+            1f,
+            ModSettings.VelocityDownsample);
+
+        downSample.thumbObject.area = Vector4.zero; // Fix thumb disappeared issues
+        downSample.tooltip = Translations.Translate("VELOCITY_DOWNSAMPLE_TOOLTIP");
+        downSample.eventValueChanged += (_, value) => ModSettings.VelocityDownsample = (int)value;
+        currentY += downSample.height + SliderMargin;
 
         CreateSlider(
             Translations.Translate("JITTER"),
@@ -216,7 +233,7 @@ public class OptionsPanel : OptionsPanelBase
         keymapping.Panel.tooltip = Translations.Translate("TOGGLE_MOTION_BLUR_TOOLTIP");
         currentY += keymapping.Panel.height + LeftMargin;
 
-        defaults_Button = UIButtons.AddButton(
+        var defaults_Button = UIButtons.AddButton(
             scrollPanel,
             LeftMargin,
             currentY,
