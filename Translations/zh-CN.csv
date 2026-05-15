@@ -16,7 +16,7 @@ LocalBlur：沿局部速度方向的简单模糊。
 Reconstruction：基于分块速度估计的逼真动态模糊。
 ReconstructionDX11：为 DirectX 11 优化的高质量版本。
 ReconstructionDisc：使用圆盘形采样核，性能更佳。","Keep the algorithm names (such as CameraMotion) unchanged. You may append the translation in parentheses after the name, e.g. 'CameraMotion (YOUR TRANSLATION)'."
-"AVAILABLE_ONLY_TIP","此设置仅在 “{0}” 设为 CameraMotion 时生效。",""
+"AVAILABLE_ONLY_TIP","此设置仅在 “{0}” 设为 “{1}” 时生效。",""
 "MOVEMENT_SCALE","位移强度",""
 "MOVEMENT_SCALE_TOOLTIP","控制摄像机平移对模糊的影响程度。
 数值越高，移动时模糊越明显。",""
@@ -33,6 +33,8 @@ ReconstructionDisc：使用圆盘形采样核，性能更佳。","Keep the algor
 "VELOCITY_SCALE","速度缩放",""
 "VELOCITY_SCALE_TOOLTIP","应用于所有速度向量的全局乘数。
 增大此值可增加动态模糊强度。",""
+"VELOCITY_DOWNSAMPLE","速度降采样因子",""
+"VELOCITY_DOWNSAMPLE_TOOLTIP","设置为1表示禁用降采样；较高的值会降低动态模糊的质量以提高性能。",""
 "SOFT_Z_DISTANCE","深度软过渡",""
 "SOFT_Z_DISTANCE_TOOLTIP","调整深度差异对模糊过渡的影响。
 数值越低，前景与背景的分离越清晰；数值越高，过渡越平滑。",""
