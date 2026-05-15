@@ -16,7 +16,7 @@ LocalBlur: Egyszerű elmosódás a helyi sebességvektorok mentén.
 Reconstruction: Hihető mozgás elmosódás végrehajtása csempék alapú sebességbecsléssel.
 ReconstructionDX11: Magasabb minőségű változat, DirectX 11-re optimalizálva.
 ReconstructionDisc: Korong alakú kernel mintavételt használ a teljesítmény érdekében.","Keep the algorithm names (such as CameraMotion) unchanged. You may append the translation in parentheses after the name, e.g. 'CameraMotion (YOUR TRANSLATION)'."
-"AVAILABLE_ONLY_TIP","This setting only applies when ""{0}"" is set to ""{1}"".",""
+"AVAILABLE_ONLY_TIP","Ez a beállítás csak akkor érvényes, ha a(z) ""{0}"" értéke ""{1}"".",""
 "MOVEMENT_SCALE","Mozgási skála",""
 "MOVEMENT_SCALE_TOOLTIP","Szabályozza, hogy a kamera elmozdulása mennyiben járul hozzá a mozgás elmosódásához.
 A magasabb értékek észrevehetőbb elmosódást eredményeznek, amikor a kamera mozog.",""
@@ -33,8 +33,8 @@ Alacsonyabb értékek esetén még a finom mozgás is elmosódik.",""
 "VELOCITY_SCALE","Sebesség skála",""
 "VELOCITY_SCALE_TOOLTIP","Az összes sebességvektorra alkalmazott globális szorzó.
 Növelje a mozgás-elmosódás intenzitásának fokozásához.",""
-"VELOCITY_DOWNSAMPLE","Velocity Downsample Factor",""
-"VELOCITY_DOWNSAMPLE_TOOLTIP","Set to 1 means no downsampling; higher values reduce quality of motion blur but improve performance.",""
+"VELOCITY_DOWNSAMPLE","Sebesség alulmintavételezési tényező",""
+"VELOCITY_DOWNSAMPLE_TOOLTIP","Ha 1-re van állítva, nincs alulmintavételezés; a magasabb értékek csökkentik a mozgásélesség minőségét, de javítják a teljesítményt.",""
 "SOFT_Z_DISTANCE","Lágy Z-távolság",""
 "SOFT_Z_DISTANCE_TOOLTIP","Beállítja, hogy a mélységkülönbségek hogyan befolyásolják az elmosódás átmeneteit.
 Alacsonyabb értékek élesebb elválasztást hoznak létre az előtér és a háttér között; magasabb értékek simán keverik azokat.",""
