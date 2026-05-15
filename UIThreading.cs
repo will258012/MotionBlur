@@ -51,8 +51,10 @@ public class UIThreading : ThreadingExtensionBase
 
         if (KeyTriggered(ModSettings.ToggleKey))
         {
-            if (Mod.Instance.ToggleMotionBlur().HasValue)
-                AudioManager.instance.PlaySound(ToggleSound, 1f);
+            if (Mod.Instance.ToggleMotionBlur() is bool isEnabled)
+            {
+                AudioManager.instance.PlaySound(isEnabled ? ToggleSound : DisabledToggleSound, 1f);
+            }
             else
                 AudioManager.instance.PlaySound(DisabledToggleSound, 1f);
         }
